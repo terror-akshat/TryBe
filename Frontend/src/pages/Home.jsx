@@ -1,8 +1,9 @@
 // src/pages/Home.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { FaStar } from "react-icons/fa";
-import axios from "axios";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useCart } from "../context/CartContext";  
+import axios from "axios";
 
 const categories = [
   "Trending",
@@ -51,21 +52,17 @@ const featuredSlides = [
   },
 ];
 
+
+
 export default function Home() {
+  const { addToCart } = useCart(); // ✅ hook from context
   const [activeCategory, setActiveCategory] = useState("Trending");
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
+
   const [imageData, setImageData] = useState([]);
-
-  function getDrivePreviewLink(driveLink) {
-    const match = driveLink.match(/\/d\/(.*?)\//);
-    if (match && match[1]) {
-      return `https://drive.google.com/uc?export=view&id=${match[1]}`;
-    }
-    return null;
-  }
-
-  useEffect(() => {
+ 
+useEffect(() => {
     const fetchImage = async () => {
       try {
         const res = await axios.get(`http://localhost:5000/api/fetch-Image`);
@@ -82,6 +79,7 @@ export default function Home() {
   useEffect(() => {
     startAuto();
     return () => stopAuto();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   function startAuto() {
@@ -186,7 +184,10 @@ export default function Home() {
                   <button className="px-4 py-2 rounded-full bg-trybePink text-white text-sm hover:bg-pink-400">
                     Shop Now
                   </button>
-                  <button className="px-4 py-2 rounded-full bg-white text-gray-700 border hover:bg-gray-50">
+                  <button
+                    onClick={() => addToCart(slide)} // ✅ add to cart
+                    className="px-4 py-2 rounded-full bg-white text-gray-700 border hover:bg-gray-50"
+                  >
                     Add to Cart
                   </button>
                 </div>
@@ -234,15 +235,13 @@ export default function Home() {
           >
             <div className="relative">
               <img
-                // src={`http://localhost:5000/api/image/${
-                //   p.images[0].split("/d/")[1].split("/")[0]
-                // }`}
-                src={p.images[0]}
+                src={p.image}
+                alt={p.title}
                 className="w-full h-40 object-cover rounded-xl"
               />
-              {/* <div className="absolute top-3 left-3 bg-pink-500 text-white px-2 py-1 text-xs rounded-full">
+              <div className="absolute top-3 left-3 bg-pink-500 text-white px-2 py-1 text-xs rounded-full">
                 {p.discount}% OFF
-              </div> */}
+              </div>
             </div>
             <h3 className="mt-3 text-sm font-semibold">{p.title}</h3>
             <p className="text-trybePink font-bold">
@@ -254,7 +253,10 @@ export default function Home() {
             <div className="flex items-center text-yellow-500 text-xs gap-1 mt-1">
               <FaStar size={12} /> {p.rating}
             </div>
-            <button className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90">
+            <button
+              onClick={() => addToCart(p)} // ✅ add to cart
+              className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90"
+            >
               Add to Cart
             </button>
           </div>
@@ -268,4 +270,5 @@ export default function Home() {
       </div>
     </div>
   );
+
 }
