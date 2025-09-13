@@ -1,0 +1,1 @@
+export const short = (s, n=120) => s.length > n ? s.slice(0,n-1) + '...' : s
