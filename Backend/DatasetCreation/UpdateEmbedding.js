@@ -1,19 +1,20 @@
-const { generateEmbedding } = require("../Utils/embedding.js");
 const Product = require("../Schema/databaseSchema.js");
+const { default: axios } = require("axios");
 
 const updateEmbedding = async function () {
-  // const products = await Product.find({});
-  // for (let p of products) {
-  //   const text = `${p.title} ${p.description} ${p.category} ${p.tags.join(
-  //     " "
-  //   )}`;
-  //   const embedding = await generateEmbedding(text);
-  //   p.embedding = embedding;
-  //   await p.save();
-  // }
-  // console.log("Embedding update for all products");
-  const response = await generateEmbedding("heelo word");
-  console.log(response[0].length);
+  const products = await Product.find({});
+  for (let p of products) {
+    const text = `${p.title}${p.description}${p.category}${p.tags.join(" ")}`;
+    try {
+      const response = await axios.post("http://0.0.0.0:8000/embed", { text });
+      // console.log(response.data.embedding);
+      p.embedding = response.data.embedding;
+      await p.save();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  console.log("embedding is successfully create");
 
   process.exit();
 };
