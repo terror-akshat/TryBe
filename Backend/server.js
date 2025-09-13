@@ -2,8 +2,14 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const connectDB = require("./database/mongo.js");
-
 const ApiRoute = require("./routes/route.js");
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 app.use(express.json());
 // ---  run once only at the time of dataset creation.

@@ -52,7 +52,9 @@ const userLogin = async (req, res) => {
       return res.status(404).json({ message: "User is not found" });
 
     return res.status(200).json({ message: "Login successfull" });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 module.exports = { registerUser, userLogin };
