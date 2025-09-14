@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { useCart } from "../context/CartContext";  
+import { useCart } from "../context/CartContext";
 import axios from "axios";
 
 const categories = [
@@ -13,7 +13,6 @@ const categories = [
   "Workwear",
   "Men",
   "Women",
-  "Kids",
 ];
 
 const featuredSlides = [
@@ -52,34 +51,59 @@ const featuredSlides = [
   },
 ];
 
-
-
 export default function Home() {
   const { addToCart } = useCart(); // ✅ hook from context
   const [activeCategory, setActiveCategory] = useState("Trending");
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [imageData, setImageData] = useState([]);
- 
-useEffect(() => {
+  const [catrgoryImage, setImage] = useState(imageData);
+
+  useEffect(() => {
     const fetchImage = async () => {
       try {
+        setIsLoading(true);
         const res = await axios.get(`http://localhost:5000/api/fetch-Image`);
         if (res.data.status === true) {
           setImageData(res.data.fetchImage);
         }
+        setIsLoading(false);
       } catch (err) {
         console.error(err);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchImage();
   }, []);
 
   useEffect(() => {
+    setImage(imageData);
+  }, [imageData]);
+
+
+  const handleCategory = (cat) => {
+    setIsLoading(true);
+    setActiveCategory(cat);
+
+    setTimeout(() => {
+      if (cat === "Trending") {
+        setImage(imageData);
+      } else {
+        const filter = imageData.filter((item) =>
+          item.tags.some((tag) => tag.toLowerCase().includes(cat.toLowerCase()))
+        );
+        setImage(filter);
+      }
+      setIsLoading(false); 
+    }, 200);
+  };
+
+  useEffect(() => {
     startAuto();
     return () => stopAuto();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   function startAuto() {
@@ -107,6 +131,15 @@ useEffect(() => {
     startAuto();
   }
 
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+        <span className="ml-4 text-lg font-semibold">Loading images...</span>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white px-6 py-6">
       {/* Categories */}
@@ -114,7 +147,7 @@ useEffect(() => {
         {categories.map((cat) => (
           <button
             key={cat}
-            onClick={() => setActiveCategory(cat)}
+            onClick={() => handleCategory(cat)}
             className={`px-4 py-1 rounded-full text-sm font-medium ${
               activeCategory === cat
                 ? "bg-trybePink text-white shadow"
@@ -164,7 +197,7 @@ useEffect(() => {
               />
               <div className="flex-1">
                 <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs">
-                  {slide.discount}% OFF
+                  {slide.discount}
                 </span>
                 <h2 className="mt-2 font-semibold text-lg">{slide.name}</h2>
                 <div className="flex items-center gap-2 text-yellow-500 text-sm mt-1">
@@ -228,26 +261,26 @@ useEffect(() => {
 
       {/* Product Grid */}
       <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-        {imageData.map((p) => (
+        {catrgoryImage.map((p) => (
           <div
             key={p._id}
             className="bg-white shadow rounded-2xl p-3 hover:shadow-lg transition"
           >
             <div className="relative">
               <img
-                src={p.image}
+                src={p.images[0]}
                 alt={p.title}
                 className="w-full h-40 object-cover rounded-xl"
               />
               <div className="absolute top-3 left-3 bg-pink-500 text-white px-2 py-1 text-xs rounded-full">
-                {p.discount}% OFF
+                {p.discount}
               </div>
             </div>
             <h3 className="mt-3 text-sm font-semibold">{p.title}</h3>
             <p className="text-trybePink font-bold">
               ₹{p.price}{" "}
               <span className="line-through text-gray-400 text-xs">
-                ₹{p.oldPrice}
+                ₹{p.old_price}
               </span>
             </p>
             <div className="flex items-center text-yellow-500 text-xs gap-1 mt-1">
@@ -270,5 +303,4 @@ useEffect(() => {
       </div>
     </div>
   );
-
 }

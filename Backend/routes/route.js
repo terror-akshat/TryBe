@@ -9,6 +9,5 @@ router.post("/login", userLogin);
 
 // image fetching
 router.get("/fetch-Image", fetchProductImage);
-router.get("/image/:id", getImage)
 
 module.exports = router;

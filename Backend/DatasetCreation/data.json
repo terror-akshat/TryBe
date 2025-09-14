@@ -6,6 +6,8 @@
       "description": "The Men Red white Colourblocked Polo Collar Cotton T-Shirt is a stylish and comfortable addition to any wardrobe. Made from high-quality cotton, it features a unique colourblocked design and a classic polo collar.",
       "category": "mens-t-shirts",
       "price": 749.99,
+      "old_price": 999.99,
+      "discount": "25% OFF",
       "rating": 4.5,
       "tags": [
         "clothing",
@@ -22,7 +24,8 @@
         "summer brunch outfit",
         "college style",
         "weekend outing",
-        "Delhi streetwear"
+        "Delhi streetwear",
+        "men"
       ],
       "weight": 2,
       "dimensions": {
@@ -34,17 +37,18 @@
       "shippingInformation": "Ships in 1 week",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1Lae7cS7NhLamN0dLkF5xelNtjA3sL0pl/view?usp=sharing"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787360/Men_Red_white_Colourblocked_Polo_Collar_Cotton_T-Shirt_lkwvgg.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 2,
       "title": " Women black-white Polka Dot Printed One Shoulder Sheath Midi Dress",
       "description": "The Women black-white Polka Dot Printed One Shoulder Sheath Midi Dress is a stylish and elegant choice for any occasion. With its unique one-shoulder design and eye-catching polka dot print, this dress is sure to turn heads.",
       "category": "women-dresses",
       "price": 437.83,
+      "old_price": 625.47,
+      "discount": "30% OFF",
       "rating": 2.97,
       "tags": [
         "clothing",
@@ -61,7 +65,8 @@
         "date outfit",
         "summer party",
         "retro vibe",
-        "girls night out"
+        "girls night out",
+        "women"
       ],
       "weight": 1.21,
       "dimensions": {
@@ -73,17 +78,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1HZk3gmzfg_d78-vEbXMyZNhamLLLuLSr/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787362/black_Women_white_Polka_Dot_Printed_One_Shoulder_Sheath_Midi_Dress_x5ub2s.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 3,
       "title": "Men Blue Slim Fit Solid Single-Breasted Formal Blazer",
       "description": "The Men Blue Slim Fit Solid Single-Breasted Formal Blazer is a sophisticated and stylish choice for formal occasions. With its tailored fit and classic design, this blazer is perfect for making a statement at any event.",
       "category": "men-blazers",
       "price": 537.09,
+      "old_price": 716.12,
+      "discount": "25% OFF",
       "rating": 0.44,
       "tags": [
         "clothing",
@@ -100,7 +106,8 @@
         "wedding guest",
         "presentation outfit",
         "corporate chic",
-        "networking event"
+        "networking event",
+        "men"
       ],
       "weight": 4.21,
       "dimensions": {
@@ -112,17 +119,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1YusNDUwaX8DWOsaVv5c9Bl8EZeA2RRSe/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787359/Men_Blue_Slim_Fit_Solid_Single-Breasted_Formal_Blazer_rem44u.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 4,
       "title": "Men Blue Solid Slim Fit Single Breasted Blazer",
       "description": "The Men Blue Solid Slim Fit Single Breasted Blazer is a sophisticated and stylish choice for formal occasions. With its tailored fit and classic design, this blazer is perfect for making a statement at any event.",
       "category": "men-blazers",
       "price": 585.18,
+      "old_price": 688.45,
+      "discount": "15% OFF",
       "rating": 4.59,
       "tags": [
         "clothing",
@@ -139,7 +147,8 @@
         "evening formal",
         "award ceremony",
         "business dinner",
-        "smart wedding look"
+        "smart wedding look",
+        "men"
       ],
       "weight": 6.25,
       "dimensions": {
@@ -151,17 +160,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1MyBbV6kGbz-5jMLX2CucIaJLnu2JQzGn/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787359/Men_Blue_Solid_Slim_Fit_Single_Breasted_Blazer_yzhgod.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 5,
       "title": "Men blue white Checked Cutaway Collar Curved Cotton Slim Fit Formal Shirt",
       "description": "The Men blue white Checked Cutaway Collar Curved Cotton Slim Fit Formal Shirt is a stylish and sophisticated choice for formal occasions. With its unique cutaway collar and slim fit design, this shirt is perfect for making a statement at any event.",
       "category": "men-shirts",
       "price": 433.4,
+      "old_price": 722.33,
+      "discount": "40% OFF",
       "rating": 2.56,
       "tags": [
         "clothing",
@@ -178,7 +188,8 @@
         "corporate wear",
         "client meeting",
         "formal Fridays",
-        "business travel"
+        "business travel",
+        "men"
       ],
       "weight": 6.77,
       "dimensions": {
@@ -190,17 +201,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/11NCzShlrfB3kOP1a6by5FkBJTEic7sVX/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787364/Men_blue_white_Checked_Cutaway_Collar_Curved_Cotton_Slim_Fit_Formal_Shirt_wmqsmp.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 6,
       "title": "Men classic blue white striped casual shirt",
       "description": "The Men classic blue white striped casual shirt is a stylish and comfortable choice for everyday wear. With its classic design and breathable fabric, this shirt is perfect for casual outings and relaxed occasions.",
       "category": "men-shirts",
       "price": 703.21,
+      "old_price": 879.01,
+      "discount": "20% OFF",
       "rating": 0.79,
       "tags": [
         "clothing",
@@ -217,7 +229,8 @@
         "beach vacation",
         "brunch outfit",
         "minimal look",
-        "weekend vibe"
+        "weekend vibe",
+        "men"
       ],
       "weight": 9.29,
       "dimensions": {
@@ -229,17 +242,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/12vPOBHu1Rj0E9VDkEg3grz63aHDW_Xd4/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787361/Men_classic_blue_white_striped_casual_shirt_bq9zoe.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 7,
       "title": "Men Classic Slim Fit Tartan Checked Pure Cotton Casual Shirt",
       "description": "The Men Classic Slim Fit Tartan Checked Pure Cotton Casual Shirt is a stylish and comfortable choice for everyday wear. With its classic design and breathable fabric, this shirt is perfect for casual outings and relaxed occasions.",
       "category": "men-shirts",
       "price": 399.43,
+      "old_price": 570.61,
+      "discount": "30% OFF",
       "rating": 3.02,
       "tags": [
         "clothing",
@@ -256,7 +270,8 @@
         "college look",
         "music festival",
         "smart casual",
-        "street style"
+        "street style",
+        "men"
       ],
       "weight": 1.84,
       "dimensions": {
@@ -268,17 +283,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1VVd5NauNAgvcaUJZVOAtStMGv0vB3H4i/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787362/Classic_Slim_Fit_Tartan_Checked_Pure_Cotton_Casual_Shirt_tq5mkf.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 8,
       "title": "Men Colourblocked Running Sporty Jacket",
       "description": "The Men Colourblocked Running Sporty Jacket is a stylish and functional choice for active wear. With its vibrant color blocking and lightweight design, this jacket is perfect for outdoor activities and workouts.",
       "category": "men-jackets",
       "price": 544.38,
+      "old_price": 777.69,
+      "discount": "30% OFF",
       "rating": 1.46,
       "tags": [
         "clothing",
@@ -295,7 +311,8 @@
         "morning run",
         "athleisure",
         "weekend sport",
-        "college sporty look"
+        "college sporty look",
+        "men"
       ],
       "weight": 5.82,
       "dimensions": {
@@ -307,17 +324,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1r0EqFzfv_q-ggjci2tO1t3sSr1MjtSf3/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787362/Men_Colourblocked_Running_Sporty_Jacket_dkehsl.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 9,
       "title": "Men Cotton Zippered Varsity Jacket",
       "description": "The Men Cotton Zippered Varsity Jacket is a stylish and versatile outerwear option. With its classic varsity design and comfortable fit, this jacket is perfect for casual outings and sporty looks.",
       "category": "men-jackets",
       "price": 455.4,
+      "old_price": 650.57,
+      "discount": "30% OFF",
       "rating": 0.53,
       "tags": [
         "clothing",
@@ -334,7 +352,8 @@
         "streetwear",
         "travel outfit",
         "winter sporty",
-        "weekend casual"
+        "weekend casual",
+        "men"
       ],
       "weight": 3.65,
       "dimensions": {
@@ -346,17 +365,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1lLRy6OfaHuN4pRQ7C7fAmrBbwaNmeyZ6/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Men_Cotton_Zippered_Varsity_Jacket_hk3h4w.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 10,
       "title": "Men Embroidered Slim Fit Jacquard Bandhgala Blazers",
       "description": "The Men Embroidered Slim Fit Jacquard Bandhgala Blazers is a sophisticated and stylish choice for formal occasions. With its intricate embroidery and tailored fit, this blazer exudes elegance and class.",
       "category": "men-blazers",
       "price": 171.71,
+      "old_price": 286.18,
+      "discount": "40% OFF",
       "rating": 2.73,
       "tags": [
         "clothing",
@@ -373,7 +393,8 @@
         "sangeet outfit",
         "royal look",
         "traditional event",
-        "Diwali party"
+        "Diwali party",
+        "men"
       ],
       "weight": 1.94,
       "dimensions": {
@@ -385,17 +406,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1aqGj2qWpBMUN9p5h-YRn1sfia8w1pld0/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787365/Men_Embroidered_Slim_Fit_Jacquard_Bandhgala_Blazers_jxvznw.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 11,
       "title": "Men Geometric Woven Design Dark blue Straight Kurta",
       "description": "The Men Geometric Woven Design Dark blue Straight Kurta is a stylish and comfortable choice for casual wear. With its unique geometric pattern and relaxed fit, this kurta is perfect for everyday outings.",
       "category": "men-kurtas",
       "price": 647.72,
+      "old_price": 809.65,
+      "discount": "20% OFF",
       "rating": 4.76,
       "tags": [
         "clothing",
@@ -412,7 +434,8 @@
         "festive look",
         "ethnic casual",
         "family gathering",
-        "summer kurta"
+        "summer kurta",
+        "men"
       ],
       "weight": 2.13,
       "dimensions": {
@@ -424,17 +447,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1w_GbrmvvRtyfg0w-lmaRaqaDi98qU5Rh/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787359/Men_Geometric_Woven_Design_Dark_blue_Straight_Kurta_d9xcxn.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 12,
       "title": "Men Geometric Woven design Jacquard Cotton Sustainable Kurta",
       "description": "The Men Geometric Woven design Jacquard Cotton Sustainable Kurta is a stylish and eco-friendly choice for casual wear. With its unique geometric pattern and comfortable fit, this kurta is perfect for everyday outings.",
       "category": "men-kurtas",
       "price": 823.22,
+      "old_price": 968.49,
+      "discount": "15% OFF",
       "rating": 4.85,
       "tags": [
         "clothing",
@@ -451,7 +475,8 @@
         "festive eco wear",
         "modern ethnic",
         "day function outfit",
-        "boho vibe"
+        "boho vibe",
+        "men"
       ],
       "weight": 9.81,
       "dimensions": {
@@ -463,17 +488,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://res.cloudinary.com/df7zyzkbe/image/upload/v1757782933/banner_xrwz4b.jpg"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787360/Men_Geometric_Woven_design_Jacquard_Cotton_Sustainable_Kurta_uah2lu.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 13,
       "title": "Men green white Striped Round Neck Cotton Oversized T-shirt",
       "description": "The Men green white Striped Round Neck Cotton Oversized T-shirt is a comfortable and stylish choice for casual wear. With its unique striped design and relaxed fit, this t-shirt is perfect for everyday outings.",
       "category": "men-tshirts",
       "price": 502.65,
+      "old_price": 670.2,
+      "discount": "25% OFF",
       "rating": 2.72,
       "tags": [
         "clothing",
@@ -490,7 +516,8 @@
         "streetwear",
         "minimal look",
         "weekend vibe",
-        "ootd vibes"
+        "ootd vibes",
+        "men"
       ],
       "weight": 7.74,
       "dimensions": {
@@ -502,17 +529,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1qIYC36ubmIqhC59cDXlp6mbl22P-7WAA/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787361/Men_green_white_Striped_Round_Neck_Cotton_Oversized_T-shirt_wqiifb.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 14,
       "title": "Men grey Men Classic Slim Fit Formal Shirt",
       "description": "The Men grey Men Classic Slim Fit Formal Shirt is a sophisticated and stylish choice for formal occasions. With its tailored fit and classic design, this shirt exudes elegance and class.",
       "category": "men-shirts",
       "price": 625.63,
+      "old_price": 834.17,
+      "discount": "25% OFF",
       "rating": 0.01,
       "tags": [
         "clothing",
@@ -529,7 +557,8 @@
         "corporate look",
         "interview outfit",
         "Bangalore office look",
-        "smart casual"
+        "smart casual",
+        "men"
       ],
       "weight": 1.33,
       "dimensions": {
@@ -541,17 +570,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1VsZc2nb8XbqVUv4z3Z_uBYpuVzAKH545/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Men_grey_Men_Classic_Slim_Fit_Formal_Shirt_bmiqro.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 15,
       "title": "Men Hooded Solid Casual Bomber Jacket",
       "description": "The Men Hooded Solid Casual Bomber Jacket is a stylish and versatile outerwear piece. With its comfortable fit and trendy design, this bomber jacket is perfect for adding a touch of flair to any casual outfit.",
       "category": "men-jackets",
       "price": 367.26,
+      "old_price": 524.66,
+      "discount": "30% OFF",
       "rating": 2.69,
       "tags": [
         "clothing",
@@ -568,7 +598,8 @@
         "college fest",
         "drip outfit",
         "winter casual",
-        "pinterest outfit"
+        "pinterest outfit",
+        "men"
       ],
       "weight": 5.11,
       "dimensions": {
@@ -580,17 +611,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1MiJTVkO4X55jMM8Kq1LCNzsbjZLFjbdU/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Men_Hooded_Solid_Casual_Bomber_Jacket_ywcfnr.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 16,
       "title": "Men Maroon Textured Slim Fit Pure Cotton Casual Shirt",
       "description": "The Men Maroon Textured Slim Fit Pure Cotton Casual Shirt is a stylish and comfortable choice for everyday wear. With its unique textured design and slim fit, this shirt is perfect for both casual and semi-formal occasions.",
       "category": "men-shirts",
       "price": 321.88,
+      "old_price": 495.2,
+      "discount": "35% OFF",
       "rating": 4.99,
       "tags": [
         "clothing",
@@ -607,7 +639,8 @@
         "brunch outfit",
         "college fest",
         "office casual",
-        "smart casual look"
+        "smart casual look",
+        "men"
       ],
       "weight": 4.97,
       "dimensions": {
@@ -619,17 +652,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/18HI0QRM5G23MPSn9t8i9_HLaIJ_Sbmr5/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787359/Men_Maroon_Textured_Slim_Fit_Pure_Cotton_ltjuxs.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 17,
       "title": "Men Navy Blue Ribbed Cardigan Sweater",
       "description": "The Men Navy Blue Ribbed Cardigan Sweater is a stylish and comfortable layering piece. With its ribbed texture and classic design, this cardigan is perfect for adding warmth and style to any outfit.",
       "category": "men-sweaters",
       "price": 851.22,
+      "old_price": 1064.03,
+      "discount": "20% OFF",
       "rating": 0.61,
       "tags": [
         "clothing",
@@ -646,7 +680,8 @@
         "dark academia",
         "office layering",
         "Himachal trip outfit",
-        "minimal look"
+        "minimal look",
+        "men"
       ],
       "weight": 2.61,
       "dimensions": {
@@ -658,17 +693,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/11-GUfXebhn49SWIv2ANK7llRi9eYa6pM/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787360/Men_Navy_Blue_Ribbed_Cardigan_Sweater_e16zds.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 18,
       "title": "Men Polo Collar Pure Cotton Pullover Sweater",
       "description": "The Men Polo Collar Pure Cotton Pullover Sweater is a stylish and comfortable choice for casual wear. With its classic polo collar and soft cotton fabric, this sweater is perfect for layering or wearing on its own.",
       "category": "men-sweaters",
       "price": 673.27,
+      "old_price": 841.59,
+      "discount": "20% OFF",
       "rating": 4.37,
       "tags": [
         "clothing",
@@ -685,7 +721,8 @@
         "minimal look",
         "chic winter",
         "college casual",
-        "pastel tones"
+        "pastel tones",
+        "men"
       ],
       "weight": 9.98,
       "dimensions": {
@@ -697,17 +734,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/19az0hlCMODV1QB0cMQIlCjgCxUuInYh1/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787361/Men_Polo_Collar_Pure_Cotton_Pullover_llv3pe.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 19,
       "title": "Men Printed Hooded Sweatshirt",
       "description": "The Men Printed Hooded Sweatshirt is a stylish and comfortable choice for casual wear. With its trendy print and cozy hood, this sweatshirt is perfect for layering or wearing on its own.",
       "category": "men-sweaters",
       "price": 549.94,
+      "old_price": 785.63,
+      "discount": "30% OFF",
       "rating": 1.09,
       "tags": [
         "clothing",
@@ -724,7 +762,8 @@
         "college fest",
         "airport look",
         "weekend vibe",
-        "cozy sweater weather"
+        "cozy sweater weather",
+        "men"
       ],
       "weight": 5.38,
       "dimensions": {
@@ -736,17 +775,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/102KPXU371oR9qAYcIvTUjfic8q9X0Dic/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787365/Men_Printed_Hooded_Sweatshirt_qiycqi.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 20,
       "title": "Men Pure Cotton Printed Hooded Sweatshirt",
       "description": "The Men Pure Cotton Printed Hooded Sweatshirt is a stylish and comfortable choice for casual wear. With its unique printed design and cozy hood, this sweatshirt is perfect for layering or wearing on its own.",
       "category": "men-sweaters",
       "price": 778.27,
+      "old_price": 972.84,
+      "discount": "20% OFF",
       "rating": 1.34,
       "tags": [
         "clothing",
@@ -763,7 +803,8 @@
         "gym outfit",
         "college casual",
         "fit check",
-        "chic streetwear"
+        "chic streetwear",
+        "men"
       ],
       "weight": 7.61,
       "dimensions": {
@@ -775,17 +816,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1AfkBEOlBNz2iKHCCBDqNCciGlAKwxFQz/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787361/Men_Pure_Cotton_Printed_Hooded_Sweatshirt_ayiwoz.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 21,
       "title": "Men Red White Colourblocked Sporty Jacket",
       "description": "The Men Red White Colourblocked Sporty Jacket is a trendy and stylish choice for casual wear. With its bold color blocking and sporty design, this jacket is perfect for adding a pop of color to any outfit.",
       "category": "men-jackets",
       "price": 855.85,
+      "old_price": 1069.81,
+      "discount": "20% OFF",
       "rating": 4.53,
       "tags": [
         "clothing",
@@ -802,7 +844,8 @@
         "airport look",
         "college fest",
         "drip outfit",
-        "winter sporty look"
+        "winter sporty look",
+        "men"
       ],
       "weight": 7.15,
       "dimensions": {
@@ -814,17 +857,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1Myyql1peaZR6WyM6Edst_QhePQWWnxml/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787364/Men_Red_White_Colourblocked_Sporty_Jacket_vgfnqd.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 22,
       "title": "Men Self Design Jodhpuri Slim Fit Bandhgala Blazer",
       "description": "The Men Self Design Jodhpuri Slim Fit Bandhgala Blazer is a sophisticated and stylish choice for formal occasions. With its unique self-design and tailored fit, this blazer exudes elegance and class.",
       "category": "men-blazers",
       "price": 196.06,
+      "old_price": 356.47,
+      "discount": "45% OFF",
       "rating": 1.19,
       "tags": [
         "clothing",
@@ -841,7 +885,8 @@
         "sangeet outfit",
         "mehendi look",
         "festival wear",
-        "reception look"
+        "reception look",
+        "men"
       ],
       "weight": 9.62,
       "dimensions": {
@@ -853,17 +898,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1_vJhNEPL5oeoZf4G171XG1puRYoUpYCu/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787362/Men_Self_Design_Jodhpuri_Slim_Fit_Bandhgala_Blazer_ljbvab.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 23,
       "title": "Men Slim Fit Vertical Striped Spread Collar Cotton Casual Shirt",
       "description": "The Men Slim Fit Vertical Striped Spread Collar Cotton Casual Shirt is a stylish and comfortable choice for casual wear. With its trendy vertical stripes and spread collar, this shirt is perfect for both work and play.",
       "category": "men-shirts",
       "price": 866.61,
+      "old_price": 1083.26,
+      "discount": "20% OFF",
       "rating": 2.71,
       "tags": [
         "clothing",
@@ -880,7 +926,8 @@
         "brunch outfit",
         "summer vibes",
         "office casual",
-        "retro 90s"
+        "retro 90s",
+        "men"
       ],
       "weight": 6.57,
       "dimensions": {
@@ -892,17 +939,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1CrFfDspZ2sqZduqieixgPtN6lG_1IMJM/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Men_Slim_Fit_Vertical_Striped_Spread_Collar_Cotton_Casual_Shirt_kvtvmm.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 24,
       "title": "Men Typography Printed Drop-Shoulder Sleeves Cotton Oversized T-shirt",
       "description": "The Men Typography Printed Drop-Shoulder Sleeves Cotton Oversized T-shirt is a trendy and comfortable choice for casual wear. With its unique printed design and relaxed fit, this t-shirt is perfect for lounging or running errands.",
       "category": "men-tshirts",
       "price": 549.44,
+      "old_price": 732.59,
+      "discount": "25% OFF",
       "rating": 2.13,
       "tags": [
         "clothing",
@@ -919,7 +967,8 @@
         "y2k fashion",
         "street drip",
         "college fest",
-        "ootd vibes"
+        "ootd vibes",
+        "men"
       ],
       "weight": 6.18,
       "dimensions": {
@@ -931,17 +980,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1zEprn56vheSu_e1HXAYgxSKA69rUtlnT/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787360/Men_Typography_Printed_Drop-Shoulder_Sleeves_Cotton_Oversized_T-shirt_g0bq0s.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 25,
       "title": "Men white purple Striped Pullover Sweater",
       "description": "The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.",
       "category": "womens-dresses",
       "price": 170.99,
+      "old_price": 284.98,
+      "discount": "40% OFF",
       "rating": 3.54,
       "tags": [
         "clothing",
@@ -958,7 +1008,8 @@
         "brunch outfit",
         "college casual",
         "pastel tones",
-        "minimal look"
+        "minimal look",
+        "men"
       ],
       "weight": 2.67,
       "dimensions": {
@@ -970,17 +1021,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1KFKvOSd5RXrletldAdmeXrmyjyk96U2-/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Men_white_purple_Striped_Pullover_bwapbl.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 26,
       "title": "Men Yellow Comfort orange blue Checked Regular Fit Casual Shirt",
       "description": "The Men Yellow Comfort orange blue Checked Regular Fit Casual Shirt is a stylish and comfortable choice for casual wear. With its vibrant colors and checked pattern, this shirt is perfect for adding a pop of color to your outfit.",
       "category": "men-shirts",
       "price": 194.99,
+      "old_price": 389.98,
+      "discount": "50% OFF",
       "rating": 2.7,
       "tags": [
         "clothing",
@@ -997,7 +1049,8 @@
         "summer vibes",
         "streetwear",
         "brunch casual",
-        "retro 90s"
+        "retro 90s",
+        "men"
       ],
       "weight": 4.11,
       "dimensions": {
@@ -1009,17 +1062,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1jL3Qsfo-oF6LRXX0LoKmdNKR2FwOM9xW/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787364/Men_Yellow_Comfort_orange_blue_Checked_Regular_Fit_Casual_Shirt_iqrtuo.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 27,
       "title": "Women beige Loose Fit Relaxed High-Rise Wrinkle Free Parallel Trousers",
       "description": "The Women beige Loose Fit Relaxed High-Rise Wrinkle Free Parallel Trousers are a comfortable and stylish choice for everyday wear. With their relaxed fit and wrinkle-free fabric, these trousers are perfect for both work and leisure.",
       "category": "womens-pants",
       "price": 454.87,
+      "old_price": 606.49,
+      "discount": "25% OFF",
       "rating": 0.03,
       "tags": [
         "clothing",
@@ -1036,7 +1090,8 @@
         "Bangalore office look",
         "brunch outfit",
         "minimal chic",
-        "summer casual"
+        "summer casual",
+        "women"
       ],
       "weight": 9.33,
       "dimensions": {
@@ -1048,17 +1103,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1ckbbfd51TNkA9Iye-LJEnRisp40R_NX3/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787358/Women_beige_Loose_Fit_Relaxed_High-Rise_Wrinkle_Free_Parallel_Trousers_mjeilj.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 28,
       "title": "Women blue and white Embroidered Suede Varsity Jacket",
       "description": "The Women blue and white Embroidered Suede Varsity Jacket is a stylish and trendy outerwear piece. With its unique embroidery and comfortable fit, this jacket is perfect for adding a touch of flair to any outfit.",
       "category": "womens-jackets",
       "price": 501.89,
+      "old_price": 716.99,
+      "discount": "30% OFF",
       "rating": 1.89,
       "tags": [
         "clothing",
@@ -1075,7 +1131,8 @@
         "streetwear",
         "airport look",
         "drip outfit",
-        "retro vibes"
+        "retro vibes",
+        "women"
       ],
       "weight": 2.7,
       "dimensions": {
@@ -1087,17 +1144,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1ExyScNziv5HhpgL0VX-GMtzrJ_LTBHr6/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787364/Men_blue_white_Checked_Cutaway_Collar_Curved_Cotton_Slim_Fit_Formal_Shirt_wmqsmp.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 29,
       "title": "Women brown Open Front Blazers",
       "description": "The Women brown Open Front Blazers is a stylish and versatile outerwear piece. With its open front design and comfortable fit, this blazer is perfect for layering over any outfit.",
       "category": "womens-jackets",
       "price": 499.44,
+      "old_price": 624.3,
+      "discount": "20% OFF",
       "rating": 3.27,
       "tags": [
         "clothing",
@@ -1114,7 +1172,8 @@
         "chic style",
         "meeting outfit",
         "brunch casual",
-        "minimal look"
+        "minimal look",
+        "women"
       ],
       "weight": 8.27,
       "dimensions": {
@@ -1126,17 +1185,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1HyDnkYVzRqiUN6OAL_Vb9Fwy0BVMcbh4/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787364/Women_brown_Open_Front_Blazers_ypxjbh.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 30,
       "title": "Women brown Sweetheart Neck Cotton Top",
       "description": "The Women brown Sweetheart Neck Cotton Top is a stylish and comfortable choice for everyday wear. With its flattering sweetheart neckline and soft cotton fabric, this top is perfect for both casual outings and more dressed-up occasions.",
       "category": "womens-tops",
       "price": 224.64,
+      "old_price": 345.6,
+      "discount": "35% OFF",
       "rating": 0.37,
       "tags": [
         "clothing",
@@ -1153,7 +1213,8 @@
         "date night look",
         "college casual",
         "summer chic",
-        "minimal aesthetic"
+        "minimal aesthetic",
+        "women"
       ],
       "weight": 7.65,
       "dimensions": {
@@ -1165,17 +1226,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1Ry3w4_zb7lqZwAtb3c9ENreEpl-Ml5LH/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787361/Women_brown_Sweetheart_Neck_Cotton_Top_jog5f4.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 31,
       "title": "Women Conversational Printed Acrylic Pullover Sweater",
       "description": "The Women Conversational Printed Acrylic Pullover Sweater is a cozy and stylish addition to your wardrobe. With its unique print and comfortable fit, this sweater is perfect for casual outings and lounging at home.",
       "category": "womens-sweaters",
       "price": 536.42,
+      "old_price": 715.23,
+      "discount": "25% OFF",
       "rating": 1.06,
       "tags": [
         "clothing",
@@ -1197,7 +1259,8 @@
         "weekend-vibes",
         "winter-party",
         "chilly-evening",
-        "casual-brunch"
+        "casual-brunch",
+        "women"
       ],
       "weight": 2.14,
       "dimensions": {
@@ -1209,17 +1272,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1hfhoxd6tii0Jhiq_tUanp6R-EziHBuj4/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787373/Conversational_Printed_Acrylic_Pullover_Sweater_yuhmk2.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 32,
       "title": "Women denim blue and white Shirt Collar Neck Crop Shirt With Trousers",
       "description": "The Women denim blue and white Shirt Collar Neck Crop Shirt With Trousers is a stylish and trendy outfit choice. With its unique shirt collar design and comfortable fit, this ensemble is perfect for both casual outings and more dressed-up occasions.",
       "category": "womens-dresses",
       "price": 872.17,
+      "old_price": 1090.21,
+      "discount": "20% OFF",
       "rating": 3.13,
       "tags": [
         "clothing",
@@ -1241,7 +1305,8 @@
         "smart-casual",
         "shopping-day",
         "casual-friday",
-        "dinner-date"
+        "dinner-date",
+        "women"
       ],
       "weight": 2.09,
       "dimensions": {
@@ -1253,17 +1318,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1bNQgIp-3R8ZgOxHXwllUf84XDhe0LXXC/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787362/Women_denim_blue_and_white_Shirt_Collar_Neck_Crop_Shirt_With_Trousers_ylkfp5.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 33,
       "title": "Women Elif short kurti with floral patterns",
       "description": "The Women Elif short kurti with floral patterns is a beautiful and stylish choice for any occasion. With its vibrant floral prints and comfortable fit, this kurti is perfect for both casual outings and festive celebrations.",
       "category": "womens-dresses",
       "price": 640.06,
+      "old_price": 853.41,
+      "discount": "25% OFF",
       "rating": 2.66,
       "tags": [
         "clothing",
@@ -1285,7 +1351,8 @@
         "summer-festive",
         "indian-traditional",
         "mehendi-function",
-        "day-celebration"
+        "day-celebration",
+        "women"
       ],
       "weight": 2.08,
       "dimensions": {
@@ -1297,17 +1364,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1nwN7EYHfJobyV7SSyC3UofpQOCafUYap/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787365/Women_Elif_short_kurti_with_floral_pattern_x6hbsp.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 34,
       "title": "Women Floral black Zari Embroidered Palazzo Suit",
       "description": "The Women Floral black Zari Embroidered Palazzo Suit is a stunning and elegant outfit choice. With its intricate zari embroidery and flowy palazzo design, this suit is perfect for festive occasions and special events.",
       "category": "womens-dresses",
       "price": 665.54,
+      "old_price": 950.77,
+      "discount": "30% OFF",
       "rating": 4.24,
       "tags": [
         "clothing",
@@ -1329,7 +1397,8 @@
         "cultural-event",
         "navratri-night",
         "eid-celebration",
-        "grand-occasion"
+        "grand-occasion",
+        "women"
       ],
       "weight": 7.94,
       "dimensions": {
@@ -1341,17 +1410,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/18BL-2y9SVtV5mKa_XDUuwPIZrRi-oe5V/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787373/Women_Floral_black_Zari_Embroidered_Palazzo_jwdbu9.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 35,
       "title": "Women Floral Mirror Work Pure Chiffon Saree",
       "description": "The Women Floral Mirror Work Pure Chiffon Saree is a stunning and elegant choice for any special occasion. With its intricate mirror work and lightweight chiffon fabric, this saree drapes beautifully and is perfect for festive celebrations.",
       "category": "womens-dresses",
       "price": 454.29,
+      "old_price": 605.72,
+      "discount": "25% OFF",
       "rating": 2.73,
       "tags": [
         "clothing",
@@ -1373,7 +1443,8 @@
         "ethnic-party",
         "cultural-night",
         "family-gathering",
-        "festive-traditional"
+        "festive-traditional",
+        "women"
       ],
       "weight": 1.64,
       "dimensions": {
@@ -1385,17 +1456,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1PCSxwHrGob-r8yr9E9szKxZiASuwKksu/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787365/Women_Floral_Mirror_Work_Pure_Chiffon_Saree_sbasbd.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 36,
       "title": "Women Floral Printed Cotton Empire Midi Dress",
       "description": "The Women Floral Printed Cotton Empire Midi Dress is a stylish and comfortable choice for any occasion. With its beautiful floral prints and flattering empire waist, this dress is perfect for both casual outings and more dressed-up events.",
       "category": "womens-dresses",
       "price": 220.85,
+      "old_price": 441.7,
+      "discount": "50% OFF",
       "rating": 0.92,
       "tags": [
         "clothing",
@@ -1417,7 +1489,8 @@
         "garden-party",
         "boho-vibes",
         "resort-wear",
-        "casual-date"
+        "casual-date",
+        "women"
       ],
       "weight": 3.98,
       "dimensions": {
@@ -1429,17 +1502,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1JNZ76dakTIPzOcWTxVx_m28fqWUmOpa3/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Women_Floral_Printed_Cotton_Empire_Midi_Dress_lac3bj.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 37,
       "title": "Women Floral Printed Fit & Flare Midi Dress",
       "description": "The Women Floral Printed Fit & Flare Midi Dress is a stylish and comfortable choice for any occasion. With its beautiful floral prints and flattering fit & flare silhouette, this dress is perfect for both casual outings and more dressed-up events.",
       "category": "womens-dresses",
       "price": 423.16,
+      "old_price": 564.21,
+      "discount": "25% OFF",
       "rating": 3.32,
       "tags": [
         "clothing",
@@ -1461,7 +1535,8 @@
         "birthday-outfit",
         "college-event",
         "daytime-party",
-        "holiday-style"
+        "holiday-style",
+        "women"
       ],
       "weight": 7.11,
       "dimensions": {
@@ -1473,17 +1548,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1URaN_o1OOhlMklbBEB4wEppHl6tRMQIM/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787373/Women_Floral_Printed_Fit_Flare_Midi_Dress_vi7uct.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 38,
       "title": "Women Floral Printed Longline Shrug",
       "description": "The Women Floral Printed Longline Shrug is a stylish and versatile layering piece. With its beautiful floral prints and lightweight fabric, this shrug is perfect for adding a touch of elegance to any outfit.",
       "category": "womens-dresses",
       "price": 616.65,
+      "old_price": 770.81,
+      "discount": "20% OFF",
       "rating": 1.37,
       "tags": [
         "clothing",
@@ -1505,7 +1581,8 @@
         "travel-outfit",
         "chill-day",
         "resort-wear",
-        "street-style"
+        "street-style",
+        "women"
       ],
       "weight": 9.71,
       "dimensions": {
@@ -1517,17 +1594,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1swd2a2d-Fxl3YM6HmK7rr3H9Oq8IN9ba/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787374/Women_Floral_Printed_Longline_Shrug_ebb08f.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 39,
       "title": "Women Geometric multicolored Printed A-Line Maxi Skirt",
       "description": "The Women Geometric multicolored Printed A-Line Maxi Skirt is a stylish and comfortable choice for any occasion. With its vibrant geometric prints and flattering A-line silhouette, this skirt is perfect for both casual outings and more dressed-up events.",
       "category": "womens-dresses",
       "price": 638.93,
+      "old_price": 851.91,
+      "discount": "25% OFF",
       "rating": 4.83,
       "tags": [
         "clothing",
@@ -1549,7 +1627,8 @@
         "summer-festive",
         "bohemian-party",
         "weekend-look",
-        "picnic-day"
+        "picnic-day",
+        "women"
       ],
       "weight": 4.31,
       "dimensions": {
@@ -1561,17 +1640,18 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1Q1p4A86H4i7QhOOKiI_yAC03B6s9IkGI/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787374/Women_Geometric_multicolored_Printed_A-Line_Maxi_Skirt_j7waco.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 40,
       "title": "Women Hooded Insulator Anti Odour Faux Fur Trim Puffer Jacket",
       "description": "The Women Hooded Insulator Anti Odour Faux Fur Trim Puffer Jacket is a stylish and functional outerwear piece. With its warm insulation and trendy faux fur trim, this jacket is perfect for staying cozy and chic during colder months.",
       "category": "womens-dresses",
       "price": 695.22,
+      "old_price": 993.17,
+      "discount": "30% OFF",
       "rating": 3.93,
       "tags": [
         "clothing",
@@ -1593,7 +1673,8 @@
         "rainy-day",
         "airport-style",
         "weekend-trip",
-        "casual-outing"
+        "casual-outing",
+        "women"
       ],
       "weight": 7.41,
       "dimensions": {
@@ -1605,17 +1686,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1qSlEaavO9ZhHUjU-8eBp1itbldI3fuT_/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Women_Hooded_Insulator_Anti_Odour_Faux_Fur_Trim_Puffer_Jacket_oykzji.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 41,
       "title": "Women Jean Flared High-Rise Low Distress Light Fade Stretchable Jeans",
       "description": "The Women Jean Flared High-Rise Low Distress Light Fade Stretchable Jeans are a trendy and comfortable choice for everyday wear. With their flattering high-rise fit and stylish flared legs, these jeans are perfect for pairing with a variety of tops.",
       "category": "womens-dresses",
       "price": 853.85,
+      "old_price": 1067.31,
+      "discount": "20% OFF",
       "rating": 3.07,
       "tags": [
         "clothing",
@@ -1637,7 +1719,8 @@
         "movie-night",
         "street-style",
         "music-festival",
-        "travel-look"
+        "travel-look",
+        "women"
       ],
       "weight": 6.42,
       "dimensions": {
@@ -1649,17 +1732,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1qkL9T8VI419jMT_hqTi0MuQhJWbhVdDc/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787364/Women_Jean_Flared_High-Rise_Low_Distress_Light_Fade_Stretchable_Jeans_wthl3x.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 42,
       "title": "Women Loose Fit Relaxed High-Rise Wrinkle Free Parallel Trousers",
       "description": "The Women Loose Fit Relaxed High-Rise Wrinkle Free Parallel Trousers are a comfortable and stylish choice for everyday wear. With their relaxed fit and wrinkle-free fabric, these trousers are perfect for both casual and professional settings.",
       "category": "womens-dresses",
       "price": 295.67,
+      "old_price": 422.39,
+      "discount": "30% OFF",
       "rating": 4.66,
       "tags": [
         "clothing",
@@ -1681,7 +1765,8 @@
         "casual-friday",
         "smart-casual",
         "presentation-day",
-        "lunch-meeting"
+        "lunch-meeting",
+        "women"
       ],
       "weight": 5.52,
       "dimensions": {
@@ -1693,17 +1778,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1ioDffpnN3S6UQ1kIit_FF9HIXKpw5uWi/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787373/Women_Loose_Fit_Relaxed_High-Rise_Wrinkle_Free_Parallel_Trousers_mdywey.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 43,
       "title": "Women Maroon Straight Fit High-Rise Stretchable Jeans",
       "description": "The Women Maroon Straight Fit High-Rise Stretchable Jeans are a stylish and comfortable choice for everyday wear. With their flattering high-rise fit and stretchy fabric, these jeans are perfect for pairing with a variety of tops.",
       "category": "womens-dresses",
       "price": 629.64,
+      "old_price": 839.52,
+      "discount": "25% OFF",
       "rating": 1.82,
       "tags": [
         "clothing",
@@ -1725,7 +1811,8 @@
         "airport-style",
         "casual-party",
         "brunch-vibes",
-        "day-out"
+        "day-out",
+        "women"
       ],
       "weight": 2.99,
       "dimensions": {
@@ -1737,17 +1824,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/17Bk1u-kHu_YqahSTPg3BQxtKXVlmCMVv/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787359/Women_Maroon_Straight_Fit_High-Rise_Stretchable_Jeans_yrqmh9.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 44,
       "title": "Women mustard kurta set with dupatta",
       "description": "The Women mustard kurta set with dupatta is a beautiful and elegant outfit perfect for festive occasions. The mustard yellow color adds a vibrant touch, while the dupatta enhances the overall look.",
       "category": "womens-dresses",
       "price": 945.86,
+      "old_price": 1182.33,
+      "discount": "20% OFF",
       "rating": 1.81,
       "tags": [
         "clothing",
@@ -1769,7 +1857,8 @@
         "mehendi-function",
         "navratri-style",
         "festive-party",
-        "daytime-celebration"
+        "daytime-celebration",
+        "women"
       ],
       "weight": 5.42,
       "dimensions": {
@@ -1781,17 +1870,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1Y85aIhTC9H-NZqo7fNHly56EqFZFwoev/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787365/Women_mustard_kurta_set_with_dupatta_lxu9nn.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 45,
       "title": "Women Pink Checked Cotton Fit & Flare Maxi Dresses",
       "description": "The Women Pink Checked Cotton Fit & Flare Maxi Dress is a stylish and comfortable choice for everyday wear. With its flattering fit and flared design, this dress is perfect for pairing with a variety of accessories.",
       "category": "womens-dresses",
       "price": 417.39,
+      "old_price": 556.52,
+      "discount": "25% OFF",
       "rating": 2.12,
       "tags": [
         "clothing",
@@ -1813,7 +1903,8 @@
         "holiday-style",
         "boho-vibes",
         "weekend-outing",
-        "casual-date"
+        "casual-date",
+        "women"
       ],
       "weight": 9.71,
       "dimensions": {
@@ -1825,17 +1916,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1Wvh4ZyhqAhpQFDK1ZIlliShz0fhYryPm/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787366/Women_Pink_Checked_Cotton_Fit_Flare_Maxi_Dresses_wq4wfj.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 46,
       "title": "Women Pink Floral Woven Design Zari Detailed Pure simple Chiffon Saree",
       "description": "The Women Pink Floral Woven Design Zari Detailed Pure simple Chiffon Saree is an elegant and timeless piece. With its intricate floral design and lightweight chiffon fabric, it's perfect for formal events and special occasions, exuding sophistication and style.",
       "category": "womens-dresses",
       "price": 334.2,
+      "old_price": 557.0,
+      "discount": "40% OFF",
       "rating": 0.63,
       "tags": [
         "clothing",
@@ -1857,7 +1949,8 @@
         "cultural-night",
         "family-function",
         "engagement-look",
-        "festive-party"
+        "festive-party",
+        "women"
       ],
       "weight": 1.31,
       "dimensions": {
@@ -1869,17 +1962,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1G_1xCdpwAUZzY3Ia4c80bIHmdUGVEvOK/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787359/Women_Pink_Floral_Woven_Design_Zari_Detailed_Pure_simple_Chiffon_Saree_in4ycc.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 47,
       "title": "Women pink red Striped Pullover Sweater",
       "description": "The Women pink red Striped Pullover Sweater is a stylish and comfortable choice for everyday wear. With its trendy striped design and soft fabric, this sweater is perfect for layering or wearing on its own.",
       "category": "womens-dresses",
       "price": 210.08,
+      "old_price": 300.11,
+      "discount": "30% OFF",
       "rating": 0.2,
       "tags": [
         "clothing",
@@ -1901,7 +1995,8 @@
         "movie-night",
         "travel-outfit",
         "weekend-style",
-        "cozy-vibes"
+        "cozy-vibes",
+        "women"
       ],
       "weight": 9.69,
       "dimensions": {
@@ -1913,17 +2008,18 @@
       "shippingInformation": "Ships in 4 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1YYRlPQ23dTMvBuhBiiJeJevg-PoeOsCp/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787366/Women_pink_red_Striped_Pullover_Sweater_cn9yke.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 48,
       "title": "Women Printed A-Line Flared Cotton Maxi Skirt",
       "description": "The Women Printed A-Line Flared Cotton Maxi Skirt is a stylish and comfortable choice for everyday wear. With its flattering A-line silhouette and vibrant prints, this skirt is perfect for pairing with a variety of tops.",
       "category": "womens-dresses",
       "price": 447.65,
+      "old_price": 596.87,
+      "discount": "25% OFF",
       "rating": 0.57,
       "tags": [
         "clothing",
@@ -1945,7 +2041,8 @@
         "bohemian-party",
         "day-out",
         "weekend-vibes",
-        "picnic-look"
+        "picnic-look",
+        "women"
       ],
       "weight": 1.35,
       "dimensions": {
@@ -1957,17 +2054,18 @@
       "shippingInformation": "Ships in 2 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1V-wqiqhQxEMPVEg8DEXSWY82pBE5amhc/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787372/Women_Printed_A-Line_Flared_Cotton_Maxi_Skirt_olwftd.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 49,
       "title": "Women Red & Yellow Sheer Chikankari Embroidered Straight Handloom Kurta with Inner",
       "description": "The Women Red & Yellow Sheer Chikankari Embroidered Straight Handloom Kurta with Inner is a beautiful and elegant piece. With its intricate chikankari embroidery and lightweight fabric, it's perfect for both casual and formal occasions.",
       "category": "womens-dresses",
       "price": 589.75,
+      "old_price": 786.33,
+      "discount": "25% OFF",
       "rating": 1.25,
       "tags": [
         "clothing",
@@ -1989,7 +2087,8 @@
         "college-ethnic",
         "cultural-event",
         "festive-dinner",
-        "mehendi-function"
+        "mehendi-function",
+        "women"
       ],
       "weight": 7.13,
       "dimensions": {
@@ -2001,17 +2100,18 @@
       "shippingInformation": "Ships in 3 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1LGNtjA_LetYlhyZG9RBpcdE23DQgHhns/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787373/Women_Red_Yellow_Sheer_Chikankari_Embroidered_Straight_Handloom_Kurta_with_Inner_pz1dvl.webp"
       ],
       "embedding": []
     },
-
     {
       "id": 50,
       "title": "Women Sleeveless V-Neck Slim-Fit Waistcoat",
       "description": "A chic and versatile sleeveless V-neck waistcoat tailored in a slim-fit design. Perfect for layering over shirts, tops, or dresses, it adds a modern edge to both formal and casual outfits.",
       "category": "womens-dresses",
       "price": 423.08,
+      "old_price": 528.85,
+      "discount": "20% OFF",
       "rating": 4.78,
       "tags": [
         "clothing",
@@ -2033,7 +2133,8 @@
         "fashion-event",
         "layered-outfit",
         "airport-look",
-        "brunch-style"
+        "brunch-style",
+        "women"
       ],
       "weight": 3.88,
       "dimensions": {
@@ -2045,7 +2146,7 @@
       "shippingInformation": "Ships in 1 weeks",
       "reviews": [],
       "images": [
-        "https://drive.google.com/file/d/1WaxIPkPGoQqzngfPReKlsxDSsjv_eZLK/view?usp=drive_link"
+        "https://res.cloudinary.com/dlcms5ngo/image/upload/v1757787363/Women_Sleeveless_V-Neck_Slim-Fit_Waistcoat_ori3yo.webp"
       ],
       "embedding": []
     }
