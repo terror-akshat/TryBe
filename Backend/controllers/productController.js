@@ -26,7 +26,7 @@ const vibeSerach = async (req, res) => {
       return { score, product: p };
     });
     scored.sort((a, b) => b.score - a.score);
-    const top5 = scored.slice(0, 5).map((item) => item.product);
+    const top5 = scored.slice(0, 10).map((item) => item.product);
     console.log(top5.length);
 
     return res.status(200).json({ status: true, products: top5 });
