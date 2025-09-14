@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import BottomNav from "./components/BottomNav";
@@ -12,29 +12,28 @@ import Chatbot from "./components/Chatbot";
 import { CartProvider } from "./context/CartContext";
 
 export default function App() {
+  const [vibeDataFetch, setVibeDataFetch] = useState([]);
   return (
-   
-      <CartProvider>
-        {" "}
-        {/* 👈 Wrap with provider */}
-        <div className="min-h-screen flex flex-col">
-          <TopNav />
+    <CartProvider>
+      {" "}
+      {/* 👈 Wrap with provider */}
+      <div className="min-h-screen flex flex-col">
+        <TopNav setVibeDataFetch={setVibeDataFetch} />
 
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/discover" element={<Discover />} />
-              <Route path="/post" element={<PostUpload />} />
-              <Route path="/wallet" element={<Wallet />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/cart" element={<CartPage />} />
-            </Routes>
-          </main>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home vibeDataFetch={vibeDataFetch} />} />
+            <Route path="/discover" element={<Discover />} />
+            <Route path="/post" element={<PostUpload />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/cart" element={<CartPage />} />
+          </Routes>
+        </main>
 
-          <Chatbot />
-          <BottomNav />
-        </div>
-      </CartProvider>
-
+        <Chatbot />
+        <BottomNav />
+      </div>
+    </CartProvider>
   );
 }

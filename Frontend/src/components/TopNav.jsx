@@ -1,17 +1,33 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FiSearch, FiShoppingCart } from 'react-icons/fi'
-import Logo from '../assets/logo.svg'
-import WalletIcon from '../assets/wallet.jpg'
-import AvatarImg from '../assets/placeholder.jpg'
-import { useCart } from '../context/CartContext' // 👈 Cart context import
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FiSearch, FiShoppingCart } from "react-icons/fi";
+import Logo from "../assets/logo.svg";
+import WalletIcon from "../assets/wallet.jpg";
+import AvatarImg from "../assets/placeholder.jpg";
+import { useCart } from "../context/CartContext";
+import axios from "axios";
 
-export default function TopNav() {
-  const { cartItems } = useCart() // cart items count
+export default function TopNav({ setVibeDataFetch }) {
+  const { cartItems } = useCart();
+  const [text, setText] = useState("");
+  const [vibe, setVibe] = useState([]);
+
+  const handleOnClick = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/vibe-search",
+        { params: { text } }
+      );
+      if (response.data.status === true) {
+        setVibeDataFetch(response.data.products);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <header className="flex items-center justify-between px-4 py-3 border-b bg-white shadow-sm">
-      {/* Left: Logo + Search */}
       <div className="flex items-center gap-4">
         <Link to="/">
           <img src={Logo} alt="Logo" className="w-24 cursor-pointer" />
@@ -20,14 +36,21 @@ export default function TopNav() {
           <input
             placeholder="Search by vibe, product, or image..."
             className="rounded-full border px-4 py-2 w-72 outline-none focus:border-trybePink transition"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           />
-          <FiSearch className="absolute right-3 top-2.5 text-gray-400" />
+          <button
+            onClick={handleOnClick}
+            type="button"
+            className="absolute right-3 top-2.5 text-gray-400 hover:text-trybePink"
+            aria-label="Search"
+          >
+            <FiSearch />
+          </button>
         </div>
       </div>
 
-      {/* Right: Wallet + Cart + Avatar */}
       <div className="flex items-center gap-6">
-        {/* Wallet */}
         <Link to="/wallet" className="hover:scale-110 transition-transform">
           <img
             src={WalletIcon}
@@ -36,8 +59,10 @@ export default function TopNav() {
           />
         </Link>
 
-        {/* Cart */}
-        <Link to="/cart" className="relative hover:scale-110 transition-transform">
+        <Link
+          to="/cart"
+          className="relative hover:scale-110 transition-transform"
+        >
           <FiShoppingCart size={24} className="text-gray-700" />
           {cartItems.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
@@ -46,7 +71,6 @@ export default function TopNav() {
           )}
         </Link>
 
-        {/* Avatar */}
         <img
           src={AvatarImg}
           alt="avatar"
@@ -54,5 +78,5 @@ export default function TopNav() {
         />
       </div>
     </header>
-  )
+  );
 }

@@ -51,7 +51,7 @@ const featuredSlides = [
   },
 ];
 
-export default function Home() {
+export default function Home({ vibeDataFetch }) {
   const { addToCart } = useCart(); // ✅ hook from context
   const [activeCategory, setActiveCategory] = useState("Trending");
   const [index, setIndex] = useState(0);
@@ -83,7 +83,6 @@ export default function Home() {
     setImage(imageData);
   }, [imageData]);
 
-
   const handleCategory = (cat) => {
     setIsLoading(true);
     setActiveCategory(cat);
@@ -97,7 +96,7 @@ export default function Home() {
         );
         setImage(filter);
       }
-      setIsLoading(false); 
+      setIsLoading(false);
     }, 200);
   };
 
@@ -260,47 +259,79 @@ export default function Home() {
       </div>
 
       {/* Product Grid */}
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-        {catrgoryImage.map((p) => (
-          <div
-            key={p._id}
-            className="bg-white shadow rounded-2xl p-3 hover:shadow-lg transition"
-          >
-            <div className="relative">
-              <img
-                src={p.images[0]}
-                alt={p.title}
-                className="w-full h-40 object-cover rounded-xl"
-              />
-              <div className="absolute top-3 left-3 bg-pink-500 text-white px-2 py-1 text-xs rounded-full">
-                {p.discount}
-              </div>
-            </div>
-            <h3 className="mt-3 text-sm font-semibold">{p.title}</h3>
-            <p className="text-trybePink font-bold">
-              ₹{p.price}{" "}
-              <span className="line-through text-gray-400 text-xs">
-                ₹{p.old_price}
-              </span>
-            </p>
-            <div className="flex items-center text-yellow-500 text-xs gap-1 mt-1">
-              <FaStar size={12} /> {p.rating}
-            </div>
-            <button
-              onClick={() => addToCart(p)} // ✅ add to cart
-              className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90"
+      {vibeDataFetch.length == 0 ? (
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {catrgoryImage.map((p) => (
+            <div
+              key={p._id}
+              className="bg-white shadow rounded-2xl p-3 hover:shadow-lg transition"
             >
-              Add to Cart
-            </button>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center mt-8">
-        <button className="px-6 py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-medium hover:opacity-90">
-          Load More Products
-        </button>
-      </div>
+              <div className="relative">
+                <img
+                  src={p.images[0]}
+                  alt={p.title}
+                  className="w-full h-40 object-cover rounded-xl"
+                />
+                <div className="absolute top-3 left-3 bg-pink-500 text-white px-2 py-1 text-xs rounded-full">
+                  {p.discount}
+                </div>
+              </div>
+              <h3 className="mt-3 text-sm font-semibold">{p.title}</h3>
+              <p className="text-trybePink font-bold">
+                ₹{p.price}{" "}
+                <span className="line-through text-gray-400 text-xs">
+                  ₹{p.old_price}
+                </span>
+              </p>
+              <div className="flex items-center text-yellow-500 text-xs gap-1 mt-1">
+                <FaStar size={12} /> {p.rating}
+              </div>
+              <button
+                onClick={() => addToCart(p)} // ✅ add to cart
+                className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90"
+              >
+                Add to Cart
+              </button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {vibeDataFetch.map((p) => (
+            <div
+              key={p._id}
+              className="bg-white shadow rounded-2xl p-3 hover:shadow-lg transition"
+            >
+              <div className="relative">
+                <img
+                  src={p.images[0]}
+                  alt={p.title}
+                  className="w-full h-40 object-cover rounded-xl"
+                />
+                <div className="absolute top-3 left-3 bg-pink-500 text-white px-2 py-1 text-xs rounded-full">
+                  {p.discount}
+                </div>
+              </div>
+              <h3 className="mt-3 text-sm font-semibold">{p.title}</h3>
+              <p className="text-trybePink font-bold">
+                ₹{p.price}{" "}
+                <span className="line-through text-gray-400 text-xs">
+                  ₹{p.old_price}
+                </span>
+              </p>
+              <div className="flex items-center text-yellow-500 text-xs gap-1 mt-1">
+                <FaStar size={12} /> {p.rating}
+              </div>
+              <button
+                onClick={() => addToCart(p)} // ✅ add to cart
+                className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90"
+              >
+                Add to Cart
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
