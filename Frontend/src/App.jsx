@@ -16,7 +16,6 @@ export default function App() {
   return (
     <CartProvider>
       {" "}
-      {/* 👈 Wrap with provider */}
       <div className="min-h-screen flex flex-col">
         <TopNav setVibeDataFetch={setVibeDataFetch} />
 

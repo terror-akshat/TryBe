@@ -18,9 +18,34 @@ const ProductSchema = new mongoose.Schema({
   },
   size: [String],
   shippingInformation: String,
-  reviews: [String],
+  reviews: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "videoPost",
+  },
   images: [String],
   embedding: [Number],
 });
 
-module.exports = mongoose.model("Product", ProductSchema);
+const videoPost = new mongoose.Schema({
+  productId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "ProductSchema",
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  review: {
+    type: String,
+  },
+  tags: [String],
+  video: {
+    type: String,
+    required: true,
+  },
+});
+
+const Products = mongoose.model("Product", ProductSchema);
+const VideoPost = mongoose.model("VideoPost", videoPost);
+
+module.exports = { Products, VideoPost };

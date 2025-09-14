@@ -1,6 +1,7 @@
 const {
   fetchProductImage,
   vibeSerach,
+  productVideoUpload,
 } = require("../controllers/productController");
 const { registerUser, userLogin } = require("../controllers/userControllers");
 
@@ -13,5 +14,7 @@ router.post("/login", userLogin);
 // image fetching
 router.get("/fetch-Image", fetchProductImage);
 router.get("/vibe-search", vibeSerach);
+
+router.post("/upload-video", productVideoUpload);
 
 module.exports = router;

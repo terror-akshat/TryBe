@@ -4,13 +4,14 @@ const dotenv = require("dotenv");
 const connectDB = require("./database/mongo.js");
 const ApiRoute = require("./routes/route.js");
 const cors = require("cors");
+const fileUpload = require("express-fileupload");
 
 app.use(
   cors({
     origin: "http://localhost:5173",
   })
 );
-
+app.use(fileUpload());
 app.use(express.json());
 // ---  run once only at the time of dataset creation.
 // const seedDb = require("./DatasetCreation/index.js")
