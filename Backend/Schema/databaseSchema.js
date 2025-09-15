@@ -18,10 +18,12 @@ const ProductSchema = new mongoose.Schema({
   },
   size: [String],
   shippingInformation: String,
-  reviews: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "videoPost",
-  },
+  reviews: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "videoPost",
+    },
+  ],
   images: [String],
   embedding: [Number],
 });

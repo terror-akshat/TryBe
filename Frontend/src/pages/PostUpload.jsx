@@ -1,8 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function PostUpload() {
+  const [title, setTitle] = useState("");
+  const [review, setReview] = useState("");
+  const [tags, setTags] = useState("");
+  const [video, setVideo] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!title || !review || !tags || !video) {
+      setMsg("⚠️ All fields are required!");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("review", review);
+      formData.append("tags", tags);
+      formData.append("video", video);
+
+      const res = await axios.post(
+        "http://localhost:5000/api/upload-video",
+        formData,
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );
+
+      setMsg("✅ " + res.data.message);
+      setTitle("");
+      setReview("");
+      setTags("");
+      setVideo(null);
+    } catch (error) {
+      console.error(error);
+      setMsg("❌ Upload failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center p-6">
+    <form
+      onSubmit={handleSubmit}
+      className="min-h-screen bg-white flex flex-col items-center p-6"
+    >
       {/* Heading */}
       <h1 className="text-2xl font-semibold">Share Your Style</h1>
       <p className="text-gray-500 text-sm">
@@ -11,7 +57,17 @@ export default function PostUpload() {
 
       {/* Upload Box */}
       <div className="mt-6 w-full max-w-md border-2 border-dashed border-pink-200 rounded-2xl p-6 text-center bg-pink-50">
-        <div className="flex flex-col items-center gap-2">
+        <input
+          type="file"
+          accept="video/*"
+          onChange={(e) => setVideo(e.target.files[0])}
+          className="hidden"
+          id="videoUpload"
+        />
+        <label
+          htmlFor="videoUpload"
+          className="cursor-pointer flex flex-col items-center gap-2"
+        >
           <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 text-2xl">
             ⬆️
           </div>
@@ -19,24 +75,34 @@ export default function PostUpload() {
           <p className="text-gray-500 text-sm">
             Show off your outfit and help others shop with confidence
           </p>
-        </div>
-
-        {/* Video / Photo Buttons */}
-        <div className="flex justify-center gap-4 mt-4">
-          <button className="px-4 py-2 rounded-full bg-pink-400 text-white hover:bg-pink-500 text-sm">
-            🎥 Video
-          </button>
-          <button className="px-4 py-2 rounded-full bg-purple-400 text-white hover:bg-purple-500 text-sm">
-            📸 Photo
-          </button>
-        </div>
+        </label>
+        {video && (
+          <p className="mt-2 text-sm text-green-600">
+            🎥 Selected: {video.name}
+          </p>
+        )}
       </div>
 
-      {/* Caption */}
+      {/* Title */}
       <div className="w-full max-w-md mt-6">
-        <label className="text-sm font-medium">Write a short caption...</label>
+        <label className="text-sm font-medium">Product Title</label>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter product title"
+          required
+          className="w-full border border-gray-300 rounded-xl p-3 mt-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300"
+        />
+      </div>
+
+      {/* Review */}
+      <div className="w-full max-w-md mt-6">
+        <label className="text-sm font-medium">Review</label>
         <textarea
-          placeholder="Tell your followers about this look! What's the vibe? Where would you wear it?"
+          value={review}
+          onChange={(e) => setReview(e.target.value)}
+          placeholder="Share your experience..."
+          required
           className="w-full border border-gray-300 rounded-xl p-3 mt-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300"
           rows={3}
         />
@@ -44,30 +110,26 @@ export default function PostUpload() {
 
       {/* Tags */}
       <div className="w-full max-w-md mt-6">
-        <p className="text-sm font-medium">Add tags (optional)</p>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {["#ootd", "#casual", "#summer", "#trendy", "#affordable"].map(
-            (tag, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 rounded-full bg-purple-100 text-purple-600 text-sm cursor-pointer hover:bg-purple-200"
-              >
-                {tag}
-              </span>
-            )
-          )}
-        </div>
+        <label className="text-sm font-medium">Tags (comma separated)</label>
+        <input
+          value={tags}
+          onChange={(e) => setTags(e.target.value)}
+          placeholder="#ootd, #summer"
+          className="w-full border border-gray-300 rounded-xl p-3 mt-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300"
+        />
       </div>
 
       {/* Post Button */}
-      <button className="mt-6 w-full max-w-md py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-semibold hover:opacity-90 shadow-md">
-        Post Now
+      <button
+        type="submit"
+        disabled={loading}
+        className="mt-6 w-full max-w-md py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-semibold hover:opacity-90 shadow-md disabled:opacity-50"
+      >
+        {loading ? "Uploading..." : "Post Now"}
       </button>
 
-      {/* Footer Note */}
-      <p className="mt-4 text-xs text-gray-500 text-center">
-        Earn up to ₹50 wallet credits for quality reviews! 🎉
-      </p>
-    </div>
+      {/* Message */}
+      {msg && <p className="mt-4 text-sm text-center">{msg}</p>}
+    </form>
   );
 }

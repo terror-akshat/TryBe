@@ -18,8 +18,8 @@ app.use(express.json());
 // seedDb();
 
 // run only once for making embedding.
-// const updateEmbedding = require("./DatasetCreation/UpdateEmbedding.js")
-// updateEmbedding();
+const updateEmbedding = require("./DatasetCreation/UpdateEmbedding.js")
+updateEmbedding();
 
 app.use("/api/", ApiRoute);
 

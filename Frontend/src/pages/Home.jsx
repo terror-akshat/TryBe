@@ -293,7 +293,7 @@ export default function Home({ vibeDataFetch }) {
               >
                 Add to Cart
               </button>
-              <Link to={`/product/${p.id}`}>
+              <Link to={`/product/${p._id}`}>
             <button className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90">
               View Details
             </button>
@@ -334,7 +334,7 @@ export default function Home({ vibeDataFetch }) {
               >
                 Add to Cart
               </button>
-               <Link to={`/product/${p.id}`}>
+               <Link to={`/product/${p._id}`}>
             <button className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90">
               View Details
             </button>

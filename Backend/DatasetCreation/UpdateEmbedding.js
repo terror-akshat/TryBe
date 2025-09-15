@@ -1,8 +1,8 @@
-const Product = require("../Schema/databaseSchema.js");
+const {Products} = require("../Schema/databaseSchema.js");
 const { default: axios } = require("axios");
 
 const updateEmbedding = async function () {
-  const products = await Product.find({});
+  const products = await Products.find({});
   for (let p of products) {
     const text = `${p.title}${p.description}${p.category}${p.tags.join(" ")}`;
     try {

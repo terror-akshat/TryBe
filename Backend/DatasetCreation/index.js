@@ -1,4 +1,4 @@
-const Products = require("../Schema/databaseSchema.js");
+const {Products} = require("../Schema/databaseSchema.js");
 const dataSet = require("./data.json");
 const dotenv = require("dotenv");
 dotenv.config();
