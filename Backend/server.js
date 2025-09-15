@@ -11,15 +11,17 @@ app.use(
     origin: "http://localhost:5173",
   })
 );
+
 app.use(fileUpload());
 app.use(express.json());
+
 // ---  run once only at the time of dataset creation.
 // const seedDb = require("./DatasetCreation/index.js")
 // seedDb();
 
 // run only once for making embedding.
-const updateEmbedding = require("./DatasetCreation/UpdateEmbedding.js")
-updateEmbedding();
+// const updateEmbedding = require("./DatasetCreation/UpdateEmbedding.js")
+// updateEmbedding();
 
 app.use("/api/", ApiRoute);
 

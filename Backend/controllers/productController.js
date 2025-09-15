@@ -58,7 +58,7 @@ const productVideoUpload = async (req, res) => {
     const videoFile = req.files.video;
 
     const uploadStream = cloudinary.uploader.upload_stream(
-      { resource_type: "video", folder: "products", upload_preset: "Demo" },
+      { resource_type: "video", upload_preset: "demo" },
       async (error, result) => {
         if (error) return res.status(500).json({ error });
 
@@ -108,6 +108,7 @@ const fetchAllVideo = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 module.exports = {
   fetchProductImage,
   vibeSerach,
