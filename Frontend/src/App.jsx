@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import CartPage from "./pages/CartPage";
 import Chatbot from "./components/Chatbot";
 import { CartProvider } from "./context/CartContext";
+import ProductDetail from "./pages/ProductDetail";
 
 export default function App() {
   const [vibeDataFetch, setVibeDataFetch] = useState([]);
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/cart" element={<CartPage />} />
+             <Route path="/product/:id" element={<ProductDetail />}/>
           </Routes>
         </main>
 

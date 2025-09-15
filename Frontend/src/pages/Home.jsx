@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useCart } from "../context/CartContext";
 import axios from "axios";
+import { Link } from "react-router-dom"; //chn
 
 const categories = [
   "Trending",
@@ -292,6 +293,11 @@ export default function Home({ vibeDataFetch }) {
               >
                 Add to Cart
               </button>
+              <Link to={`/product/${p.id}`}>
+            <button className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90">
+              View Details
+            </button>
+          </Link>
             </div>
           ))}
         </div>
@@ -328,6 +334,11 @@ export default function Home({ vibeDataFetch }) {
               >
                 Add to Cart
               </button>
+               <Link to={`/product/${p.id}`}>
+            <button className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90">
+              View Details
+            </button>
+          </Link>
             </div>
           ))}
         </div>

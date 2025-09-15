@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import{Link} from "react-router-dom";
 import { FaHeart, FaRegCommentDots, FaShareAlt, FaFilter, FaSearch } from "react-icons/fa";
 
 const posts = [
@@ -97,9 +98,12 @@ export default function Discover() {
                       <FaShareAlt /> {post.shares}
                     </span>
                   </div>
+                  <Link to={`/product/${post.id}`}>
+
                   <button className="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs shadow hover:opacity-90">
                     Shop This Look
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
