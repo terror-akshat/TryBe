@@ -14,7 +14,6 @@ const fetchProductImage = async (req, res) => {
 
 const vibeSerach = async (req, res) => {
   const { text } = req.query;
-  console.log(text);
 
   if (!text) return res.status(400).json({ message: "Text is required" });
 
@@ -58,7 +57,7 @@ const productVideoUpload = async (req, res) => {
     const videoFile = req.files.video;
 
     const uploadStream = cloudinary.uploader.upload_stream(
-      { resource_type: "video", upload_preset: "demo" },
+      { resource_type: "video", folder: "products", upload_preset: "Demo" },
       async (error, result) => {
         if (error) return res.status(500).json({ error });
 
@@ -109,10 +108,86 @@ const fetchAllVideo = async (req, res) => {
   }
 };
 
+const fetchTitle = async (req, res) => {
+  try {
+    const response = await Products.find({}, { title: 1, _id: 1 });
+    return res.status(200).json({
+      status: true,
+      titles: response,
+    });
+  } catch (error) {
+    console.error("Error fetching titles:", error);
+    return res.status(500).json({
+      status: false,
+      message: "Error fetching titles",
+      error: error.message,
+    });
+  }
+};
+
+const vibeSearchVideo = async (req, res) => {
+  try {
+    const { text } = req.body;
+    if (!text) return res.status(400).json({ message: "text is required" });
+
+    const response = await axios.post("http://0.0.0.0:8000/embed", { text });
+    const embedding = response.data.embedding;
+
+    const videos = await VideoPost.find();
+    const products = await Products.find();
+
+    const match = videos.map((video) => {
+      const product = products.find(
+        (p) => String(p._id) === String(video.productId)
+      );
+      return {
+        videoId: video._id,
+        product: product || null,
+      };
+    });
+
+    const scored = match
+      .filter((p) => p.product && p.product.embedding)
+      .map((p) => {
+        const score = cosinineSimilarity(embedding, p.product.embedding);
+        return { score, videoId: p.videoId };
+      });
+
+    scored.sort((a, b) => b.score - a.score);
+
+    const top5 = scored
+      .slice(0, 10)
+      .map((item) =>
+        videos.find((v) => String(v._id) === String(item.videoId))
+      );
+
+    return res.status(200).json({ top5 });
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
+const tagSearch = async (req, res) => {
+  try {
+    const { tag } = req.query;
+    if (!tag) return res.status(400).json({ message: "Tag is required" });
+
+    const videos = await VideoPost.find({}, { productId: 1 });
+    const products = await Products.find({});
+    return res.status(200).json({ status: true, videos });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+
 module.exports = {
   fetchProductImage,
   vibeSerach,
   productVideoUpload,
   fetchSingleProduct,
-  fetchAllVideo
+  fetchAllVideo,
+  fetchTitle,
+  vibeSearchVideo,
+  tagSearch,
 };

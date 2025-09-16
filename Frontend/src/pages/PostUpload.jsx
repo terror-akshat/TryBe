@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function PostUpload() {
@@ -8,6 +8,8 @@ export default function PostUpload() {
   const [video, setVideo] = useState(null);
   const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
+  const [similarProducts, setSimilarProducts] = useState([]);
+  const [filteredTitles, setFilteredTitles] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,6 +45,24 @@ export default function PostUpload() {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    if (title.length > 0) {
+      const fetch = async () => {
+        try {
+          const response = await axios.get(
+            "http://localhost:5000/api/fetch-title"
+          );
+          if (response.data.status === true) {
+            setSimilarProducts(response.data.titles);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetch();
+    }
+  }, [title]);
+  console.log(similarProducts);
 
   return (
     <form
@@ -84,15 +104,48 @@ export default function PostUpload() {
       </div>
 
       {/* Title */}
-      <div className="w-full max-w-md mt-6">
+
+      {/* Title */}
+      <div className="w-full max-w-md mt-6 relative">
         <label className="text-sm font-medium">Product Title</label>
         <input
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => {
+            const inputValue = e.target.value;
+            setTitle(inputValue);
+
+            if (inputValue.trim() === "") {
+              setFilteredTitles([]);
+            } else {
+              const matches = similarProducts
+                .map((item) => item.title)
+                .filter((t) =>
+                  t.toLowerCase().startsWith(inputValue.toLowerCase())
+                );
+              setFilteredTitles(matches);
+            }
+          }}
           placeholder="Enter product title"
           required
           className="w-full border border-gray-300 rounded-xl p-3 mt-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300"
         />
+
+        {filteredTitles.length > 0 && (
+          <ul className="absolute w-full border border-gray-300 rounded-xl mt-1 bg-white shadow-md z-10 max-h-40 overflow-y-auto">
+            {filteredTitles.map((t, i) => (
+              <li
+                key={i}
+                onClick={() => {
+                  setTitle(t);
+                  setFilteredTitles([]);
+                }}
+                className="p-2 cursor-pointer hover:bg-pink-100"
+              >
+                {t}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* Review */}

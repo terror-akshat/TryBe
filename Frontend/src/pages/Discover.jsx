@@ -30,7 +30,6 @@ export default function Discover() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-purple-50">
-      {/* 🔍 Search + Filter Bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-white sticky top-0 shadow-md z-50">
         <div className="flex items-center bg-gray-100 rounded-full px-3 py-2 w-full max-w-md">
           <FaSearch className="text-gray-500 mr-2" />
