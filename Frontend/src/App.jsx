@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import TopNav from "./components/TopNav";
 import BottomNav from "./components/BottomNav";
 import Home from "./pages/Home";
@@ -11,14 +17,18 @@ import CartPage from "./pages/CartPage";
 import Chatbot from "./components/Chatbot";
 import { CartProvider } from "./context/CartContext";
 import ProductDetail from "./pages/ProductDetail";
+import LoginPage from "./pages/LoginPage"; // add
+import SignupPage from "./pages/SignupPage"; //add
 
 export default function App() {
   const [vibeDataFetch, setVibeDataFetch] = useState([]);
+  const location = useLocation();
+  const hideNav = ["/login", "/signup"].includes(location.pathname);
   return (
     <CartProvider>
       {" "}
       <div className="min-h-screen flex flex-col">
-        <TopNav setVibeDataFetch={setVibeDataFetch} />
+       {!hideNav && <TopNav setVibeDataFetch={setVibeDataFetch} />}
 
         <main className="flex-grow">
           <Routes>
@@ -28,12 +38,18 @@ export default function App() {
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/cart" element={<CartPage />} />
-             <Route path="/product/:id" element={<ProductDetail />}/>
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
           </Routes>
         </main>
-
-        <Chatbot />
-        <BottomNav />
+        {/* Bottom Navbar + Chatbot */}
+        {!hideNav && (
+          <div>
+            <Chatbot />
+            <BottomNav />
+          </div>
+        )}
       </div>
     </CartProvider>
   );
