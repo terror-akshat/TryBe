@@ -6,7 +6,7 @@ import { AiOutlineWallet, AiOutlineUser } from "react-icons/ai"; // ✅ Outline 
 
 export default function BottomNav() {
   const navItems = [
-    { to: "/home", icon: <AiOutlineHome size={24} />, label: "Home" },
+    { to: "/home/:id", icon: <AiOutlineHome size={24} />, label: "Home" },
     { to: "/discover", icon: <AiOutlineCompass size={24} />, label: "Discover" },
     { to: "/post", icon: <FiPlusCircle size={32} />, label: "Post", isCenter: true },
     { to: "/wallet", icon: <AiOutlineWallet size={24} />, label: "Wallet" },
