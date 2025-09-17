@@ -127,7 +127,7 @@ const fetchTitle = async (req, res) => {
 
 const vibeSearchVideo = async (req, res) => {
   try {
-    const { text } = req.body;
+    const { text } = req.query;
     if (!text) return res.status(400).json({ message: "text is required" });
 
     const response = await axios.post("http://0.0.0.0:8000/embed", { text });
@@ -140,28 +140,21 @@ const vibeSearchVideo = async (req, res) => {
       const product = products.find(
         (p) => String(p._id) === String(video.productId)
       );
-      return {
-        videoId: video._id,
-        product: product || null,
-      };
+      return { video, product: product || null };
     });
 
     const scored = match
-      .filter((p) => p.product && p.product.embedding)
-      .map((p) => {
-        const score = cosinineSimilarity(embedding, p.product.embedding);
-        return { score, videoId: p.videoId };
+      .filter((m) => m.product && m.product.embedding)
+      .map((m) => {
+        const score = cosinineSimilarity(embedding, m.product.embedding);
+        return { score, video: m.video };
       });
 
     scored.sort((a, b) => b.score - a.score);
 
-    const top5 = scored
-      .slice(0, 10)
-      .map((item) =>
-        videos.find((v) => String(v._id) === String(item.videoId))
-      );
+    const top10Videos = scored.slice(0, 5).map((item) => item.video);
 
-    return res.status(200).json({ top5 });
+    return res.status(200).json({ status: true, videos: top10Videos });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -169,17 +162,37 @@ const vibeSearchVideo = async (req, res) => {
 
 const tagSearch = async (req, res) => {
   try {
-    const { tag } = req.query;
-    if (!tag) return res.status(400).json({ message: "Tag is required" });
+    let { tags } = req.query;
+    if (!tags) return res.status(400).json({ message: "Tags are required" });
+    tags = decodeURIComponent(tags)
+      .split(",")
+      .map((t) => t.trim());
 
-    const videos = await VideoPost.find({}, { productId: 1 });
-    const products = await Products.find({});
-    return res.status(200).json({ status: true, videos });
+    console.log("Searching tags:", tags);
+    const regexTags = tags.map((t) => new RegExp("^" + t + "$", "i"));
+
+    const matchedProducts = await Products.find({
+      tags: { $in: regexTags },
+    });
+
+    if (matchedProducts.length === 0) {
+      return res.status(200).json({ status: false, videos: [] });
+    }
+
+    const productIds = matchedProducts.map((p) => p._id);
+    console.log(productIds);
+
+    const videos = await VideoPost.find({ productId: { $in: productIds } });
+    console.log(videos.length);
+
+    return res.status(200).json({
+      status: true,
+      videos,
+    });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
-
 
 module.exports = {
   fetchProductImage,

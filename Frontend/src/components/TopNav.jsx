@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiSearch, FiShoppingCart } from "react-icons/fi";
 import Logo from "../assets/logo.svg";
 import WalletIcon from "../assets/wallet.jpg";
@@ -8,6 +8,7 @@ import { useCart } from "../context/CartContext";
 import axios from "axios";
 
 export default function TopNav({ setVibeDataFetch }) {
+  const nav = useNavigate();
   const { cartItems } = useCart();
   const [text, setText] = useState("");
   const [vibe, setVibe] = useState([]);
@@ -51,6 +52,14 @@ export default function TopNav({ setVibeDataFetch }) {
       </div>
 
       <div className="flex items-center gap-6">
+        <button
+          onClick={() => nav("/")}
+          type="button"
+          className="px-4 py-2 rounded-md border text-gray-700 hover:bg-gray-100 transition"
+        >
+          Logout
+        </button>
+
         <Link to="/wallet" className="hover:scale-110 transition-transform">
           <img
             src={WalletIcon}

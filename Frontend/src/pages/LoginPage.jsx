@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/sign.png"; // 👈 apna Trybe logo import karo
-
-export default function LoginPage() {
+import axios from "axios";
+export default function LoginPage({ setUserDetails }) {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     identifier: "", // email ya username
     password: "",
@@ -12,29 +13,33 @@ export default function LoginPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login Data:", form);
-    alert("Login Successful ✅");
+    try {
+      const response = await axios.post("http://localhost:5000/api/login", {
+        gmail: form.identifier,
+        password: form.password,
+      });
+      if (response.data.status === true) {
+        setUserDetails(response.data.foundUser[0]);
+        navigate(`/home/${response.data.foundUser[0]._id}`);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white relative">
-      {/* 👕 Background clothing emojis for subtle pattern */}
-      
-
       <form
         onSubmit={handleSubmit}
         className="relative z-10 bg-white border border-gray-200 rounded-2xl shadow-lg p-8 w-full max-w-md text-gray-900"
       >
-        {/* Logo */}
         <div className="flex justify-center mb-6">
           <img src={Logo} alt="Trybe Logo" className="w-20 h-auto" />
         </div>
 
         <h2 className="text-2xl font-bold mb-6 text-center">Welcome Back</h2>
-
-        {/* Username or Email */}
         <input
           type="text"
           name="identifier"
@@ -45,7 +50,6 @@ export default function LoginPage() {
           className="w-full mb-4 px-4 py-2 rounded-lg bg-gray-100 placeholder-gray-500 focus:outline-none"
         />
 
-        {/* Password */}
         <input
           type="password"
           name="password"

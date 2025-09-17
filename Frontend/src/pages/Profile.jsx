@@ -1,20 +1,17 @@
 import React from "react";
 
-export default function Profile() {
+export default function Profile({ userDetails }) {
   return (
     <div className="flex flex-col items-center p-6 bg-white min-h-screen">
-      {/* Profile Picture */}
       <div className="w-24 h-24 rounded-full bg-gradient-to-r from-pink-200 to-purple-300 flex items-center justify-center text-3xl font-bold text-white">
         A
       </div>
 
-      {/* Username */}
-      <h2 className="mt-4 text-xl font-semibold">@style_lover_anna</h2>
+      <h2 className="mt-4 text-xl font-semibold">{userDetails.username}</h2>
       <p className="text-gray-500 text-sm text-center">
         Fashion enthusiast | Style blogger | Gen Z vibes ✨
       </p>
 
-      {/* Stats Row */}
       <div className="flex justify-center gap-8 mt-4 text-center">
         <div>
           <p className="font-bold">42</p>
@@ -30,7 +27,6 @@ export default function Profile() {
         </div>
       </div>
 
-      {/* Buttons */}
       <div className="flex gap-3 mt-5">
         <button className="bg-pink-400 text-white hover:bg-pink-500 rounded-full px-6 py-2">
           Edit Profile
@@ -40,7 +36,6 @@ export default function Profile() {
         </button>
       </div>
 
-      {/* Info Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 w-full max-w-md">
         <div className="bg-pink-100 p-4 rounded-xl text-center">
           <p className="font-bold text-pink-600">₹185</p>

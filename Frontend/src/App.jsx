@@ -22,28 +22,37 @@ import SignupPage from "./pages/SignupPage"; //add
 
 export default function App() {
   const [vibeDataFetch, setVibeDataFetch] = useState([]);
+  const [userDetails, setUserDetails] = useState({});
   const location = useLocation();
   const hideNav = ["/login", "/signup"].includes(location.pathname);
   return (
     <CartProvider>
       {" "}
       <div className="min-h-screen flex flex-col">
-       {!hideNav && <TopNav setVibeDataFetch={setVibeDataFetch} />}
+        {!hideNav && <TopNav setVibeDataFetch={setVibeDataFetch} />}
 
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home vibeDataFetch={vibeDataFetch} />} />
+            <Route
+              path="/home/:id"
+              element={<Home vibeDataFetch={vibeDataFetch} />}
+            />
             <Route path="/discover" element={<Discover />} />
             <Route path="/post" element={<PostUpload />} />
             <Route path="/wallet" element={<Wallet />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/profile"
+              element={<Profile userDetails={userDetails} />}
+            />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/login" element={<LoginPage />} />
+            <Route
+              path="/"
+              element={<LoginPage setUserDetails={setUserDetails} />}
+            />
             <Route path="/signup" element={<SignupPage />} />
           </Routes>
         </main>
-        {/* Bottom Navbar + Chatbot */}
         {!hideNav && (
           <div>
             <Chatbot />

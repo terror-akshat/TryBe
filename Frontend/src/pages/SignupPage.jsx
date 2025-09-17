@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/sign.png"; // 👈 apna Trybe logo import karo
-
+import axios from "axios";
 export default function SignupPage() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -16,10 +17,21 @@ export default function SignupPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", form);
-    alert("Signup Successful 🚀");
+    try {
+      const response = await axios.post("http://localhost:5000/api/register", {
+        username: form.name,
+        gmail: form.email,
+        password: form.password,
+        phone: form.phone,
+      });
+      if (response.data.status === true) {
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -76,27 +88,6 @@ export default function SignupPage() {
           className="w-full mb-4 px-4 py-2 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
         />
 
-        {/* Username */}
-        <input
-          type="text"
-          name="username"
-          placeholder="Unique Username"
-          value={form.username}
-          onChange={handleChange}
-          required
-          className="w-full mb-4 px-4 py-2 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-        />
-
-        {/* DOB */}
-        <input
-          type="date"
-          name="dob"
-          value={form.dob}
-          onChange={handleChange}
-          required
-          className="w-full mb-4 px-4 py-2 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
-        />
-
         {/* Password */}
         <input
           type="password"
@@ -117,7 +108,7 @@ export default function SignupPage() {
 
         <p className="mt-4 text-center text-sm text-gray-700">
           Already have an account?{" "}
-          <Link to="/login" className="text-pink-500 font-medium hover:underline">
+          <Link to="/" className="text-pink-500 font-medium hover:underline">
             Login
           </Link>
         </p>
