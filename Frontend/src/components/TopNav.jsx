@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FiSearch, FiShoppingCart } from "react-icons/fi";
+import { FiSearch, FiShoppingCart, FiBarChart2} from "react-icons/fi";
 import Logo from "../assets/logo.svg";
 import WalletIcon from "../assets/wallet.jpg";
 import AvatarImg from "../assets/placeholder.jpg";
 import { useCart } from "../context/CartContext";
 import axios from "axios";
+
 
 export default function TopNav({ setVibeDataFetch }) {
   const nav = useNavigate();
@@ -79,7 +80,13 @@ export default function TopNav({ setVibeDataFetch }) {
             </span>
           )}
         </Link>
-
+          {/* Poll */}
+        <Link
+          to="/poll"
+          className="relative hover:scale-110 transition-transform"
+        >
+          <FiBarChart2 size={24} className="text-purple-600" />
+        </Link>
         <img
           src={AvatarImg}
           alt="avatar"

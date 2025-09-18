@@ -1,12 +1,20 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
+import { usePoll } from "../context/PollContext";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function CartPage() {
+  const{id}=useParams();
   const { cartItems, removeFromCart } = useCart();
+  const {addToPoll}=usePoll(); //used addtoPoll
+
 
   // Calculate totals
-  const subtotal = cartItems.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0);
+  const subtotal = cartItems.reduce(
+    (acc, item) => acc + item.price * (item.quantity || 1),
+    0
+  );
   const discount = subtotal > 0 ? 50 : 0; // example flat discount
   const shipping = subtotal > 75 ? 0 : 5; // free shipping if > $75
   const total = subtotal - discount + shipping;
@@ -19,7 +27,7 @@ export default function CartPage() {
         <div className="text-center text-gray-600">
           <p>Your cart is empty 🛒</p>
           <Link
-            to="/"
+            to="/home/:id"
             className="mt-4 inline-block px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:opacity-90"
           >
             Continue Shopping
@@ -45,7 +53,9 @@ export default function CartPage() {
                 <div className="flex-1 md:ml-6 mt-4 md:mt-0 text-center md:text-left">
                   <h3 className="text-lg font-semibold">{item.name}</h3>
                   <p className="text-gray-600">${item.price.toFixed(2)}</p>
-                  <p className="text-sm text-green-600">Free shipping on orders over $75</p>
+                  <p className="text-sm text-green-600">
+                    Free shipping on orders over $75
+                  </p>
 
                   {/* Quantity */}
                   <div className="flex items-center justify-center md:justify-start mt-3 space-x-2">
@@ -66,6 +76,13 @@ export default function CartPage() {
                   >
                     Remove
                   </button>
+                  {/* ✅ New Button */}
+                  <button
+                    onClick={() => addToPoll(item)}
+                    className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:opacity-90"
+                  >
+                    Add to Poll
+                  </button>
                 </div>
               </div>
             ))}
@@ -85,7 +102,9 @@ export default function CartPage() {
               </div>
               <div className="flex justify-between">
                 <span>Shipping</span>
-                <span>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
+                <span>
+                  {shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}
+                </span>
               </div>
               <hr />
               <div className="flex justify-between font-semibold text-lg">
@@ -101,13 +120,15 @@ export default function CartPage() {
             <button className="w-full mt-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-lg hover:opacity-90 transition">
               Proceed to Checkout
             </button>
+            <button className="w-full mt-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-lg hover:opacity-90 transition"> 
 
             <Link
-              to="/"
-              className="mt-4 block text-center py-2 text-pink-600 font-medium hover:underline"
-            >
-              ← Continue Shopping
+              to={`/home/${id}`}
+              
+              >
+               Continue Shopping
             </Link>
+              </button>
           </div>
         </div>
       )}
