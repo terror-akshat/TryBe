@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { VideoPost } = require("./databaseSchema.js");
 
 const UserSchema = new mongoose.Schema({
   username: {

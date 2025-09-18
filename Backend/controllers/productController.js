@@ -1,6 +1,7 @@
 const { Products, VideoPost } = require("../Schema/databaseSchema.js");
 const cosinineSimilarity = require("../Utils/cosineSimilarity.js");
 const axios = require("axios");
+const User = require("../Schema/userSchema.js");
 const { cloudinary } = require("../cloudinary/cloudinary.js");
 
 const fetchProductImage = async (req, res) => {
@@ -28,7 +29,6 @@ const vibeSerach = async (req, res) => {
     });
     scored.sort((a, b) => b.score - a.score);
     const top5 = scored.slice(0, 10).map((item) => item.product);
-    console.log(top5.length);
 
     return res.status(200).json({ status: true, products: top5 });
   } catch (error) {
@@ -39,11 +39,14 @@ const vibeSerach = async (req, res) => {
 const productVideoUpload = async (req, res) => {
   try {
     const { title, review, tags } = req.body;
+    const { id } = req.params;
 
     if (!title || !review || !tags || !req.files?.video) {
       return res.status(400).json({ message: "All fields are required" });
     }
     const pro = await Products.find({});
+    const user = await User.findById(id);
+
     for (let p of pro) {
       if (p.title === title) {
         var product = p;
@@ -63,13 +66,16 @@ const productVideoUpload = async (req, res) => {
 
         const newVideo = new VideoPost({
           productId: product._id,
+          userId: user._id,
           title,
           review,
           tags: Array.isArray(tags) ? tags : tags.split(","),
           video: result.secure_url,
         });
-
+        user.posts.push(newVideo._id);
         product.reviews = newVideo._id;
+
+        await user.save();
         await product.save();
         await newVideo.save();
 
@@ -194,6 +200,19 @@ const tagSearch = async (req, res) => {
   }
 };
 
+const getUserWithPosts = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findById(id).populate("posts");
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    return res.status(200).json({ status: true, user });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   fetchProductImage,
   vibeSerach,
@@ -203,4 +222,5 @@ module.exports = {
   fetchTitle,
   vibeSearchVideo,
   tagSearch,
+  getUserWithPosts,
 };

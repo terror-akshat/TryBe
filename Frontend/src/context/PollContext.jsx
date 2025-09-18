@@ -6,7 +6,7 @@ const PollContext = createContext();
 export const PollProvider = ({ children }) => {
   const [pollItems, setPollItems] = useState([]);
   const [question, setQuestion] = useState("");
-  const [votes, setVotes] = useState({});
+  const [votes, setVotes] = useState([]);
   const [pollId, setPollId] = useState(null);
 
   // Load poll from localStorage if exists

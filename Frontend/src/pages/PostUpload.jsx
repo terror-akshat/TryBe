@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export default function PostUpload() {
+  const { id } = useParams();
+  console.log(id);
+
   const [title, setTitle] = useState("");
   const [review, setReview] = useState("");
   const [tags, setTags] = useState("");
@@ -28,7 +32,7 @@ export default function PostUpload() {
       formData.append("video", video);
 
       const res = await axios.post(
-        "http://localhost:5000/api/upload-video",
+        `http://localhost:5000/api/upload-video/${id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

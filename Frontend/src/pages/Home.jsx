@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useCart } from "../context/CartContext";
 import axios from "axios";
-import { Link } from "react-router-dom"; //chn
+import { Link, useParams } from "react-router-dom"; //chn
 
 const categories = [
   "Trending",
@@ -52,13 +52,14 @@ const featuredSlides = [
   },
 ];
 
-export default function Home({ vibeDataFetch }) {
+export default function Home({ vibeDataFetch, setId }) {
+  const { id } = useParams();
+  setId(id);
   const { addToCart } = useCart(); // ✅ hook from context
   const [activeCategory, setActiveCategory] = useState("Trending");
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
-
   const [imageData, setImageData] = useState([]);
   const [catrgoryImage, setImage] = useState(imageData);
 
@@ -99,6 +100,11 @@ export default function Home({ vibeDataFetch }) {
       }
       setIsLoading(false);
     }, 200);
+  };
+
+  const handleOnAddProduct = (id) => {
+    const product = catrgoryImage.find((p) => p._id === id);
+    addToCart(product);
   };
 
   useEffect(() => {
@@ -288,7 +294,7 @@ export default function Home({ vibeDataFetch }) {
                 <FaStar size={12} /> {p.rating}
               </div>
               <button
-                onClick={() => addToCart(p)} // ✅ add to cart
+                onClick={() => handleOnAddProduct(p._id)} // ✅ add to cart
                 className="mt-3 w-full py-2 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white text-sm hover:opacity-90"
               >
                 Add to Cart

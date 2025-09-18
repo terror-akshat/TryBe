@@ -7,6 +7,7 @@ const {
   fetchTitle,
   vibeSearchVideo,
   tagSearch,
+  getUserWithPosts,
 } = require("../controllers/productController");
 const { registerUser, userLogin } = require("../controllers/userControllers");
 
@@ -24,7 +25,8 @@ router.get("/fetch-video", fetchAllVideo);
 router.get("/fetch-title", fetchTitle);
 router.get("/vibe-search-video", vibeSearchVideo);
 router.get("/tag-search", tagSearch);
+router.get("/video/:id", getUserWithPosts);
 
-router.post("/upload-video", productVideoUpload);
+router.post("/upload-video/:id", productVideoUpload);
 
 module.exports = router;

@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import { usePoll } from "../context/PollContext";
 
 export default function PollPage() {
-  const { id } = useParams(); // pollId from URL
+  const { id } = useParams();
+  // pollId from URL
   const {
     pollItems,
     clearPoll,
@@ -84,18 +85,18 @@ export default function PollPage() {
       ) : (
         pollItems.map((item) => (
           <div
-            key={item.id}
+            key={item._id}
             className="flex items-center justify-between border p-4 rounded-lg mb-3"
           >
             <div className="flex items-center gap-4">
               <img
-                src={item.img || item.image}
-                alt={item.name}
+                src={item.images[0] || item.image}
+                alt={item.title}
                 className="w-20 h-20 rounded object-cover"
               />
               <div>
-                <h3 className="font-semibold">{item.name}</h3>
-                <p>Votes: {votes[item.id] || 0}</p>
+                <h3 className="font-semibold">{item.title}</h3>
+                {/* <p>Votes: {votes[item._id] || 0}</p> */}
               </div>
             </div>
           </div>
@@ -143,9 +144,14 @@ export default function PollPage() {
             <h3 className="text-xl font-bold mb-4">📊 Poll Results</h3>
             <p className="mb-4">{question}</p>
             {pollItems.map((item) => (
-              <div key={item.id} className="border p-3 rounded mb-3">
-                <p className="font-semibold">{item.name}</p>
-                <p>Votes: {votes[item.id] || 0}</p>
+              <div key={item._id} className="border p-3 rounded mb-3">
+                <img
+                  src={item.images[0] || item.image}
+                  alt={item.title}
+                  className="w-20 h-20 rounded object-cover"
+                />
+                <p className="font-semibold">{item.title}</p>
+                <p className="text-gray-600">Votes: {votes[item._id] || 0}</p>
               </div>
             ))}
             <button

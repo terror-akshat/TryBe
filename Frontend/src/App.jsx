@@ -26,29 +26,30 @@ import PollVotePage from "./pages/PollVotePage"; //add
 export default function App() {
   const [vibeDataFetch, setVibeDataFetch] = useState([]);
   const [userDetails, setUserDetails] = useState({});
+  const [id, setId] = useState(null);
   const location = useLocation();
-  const hideNav = ["/", "/signup","/discover"].includes(location.pathname);
+  const hideNav = ["/", "/signup", "/discover"].includes(location.pathname);
   return (
     <CartProvider>
       <PollProvider>
         {" "}
         <div className="min-h-screen flex flex-col">
-          {!hideNav && <TopNav setVibeDataFetch={setVibeDataFetch} />}
+          {!hideNav && <TopNav setVibeDataFetch={setVibeDataFetch} id={id} />}
 
           <main className="flex-grow">
             <Routes>
               <Route
                 path="/home/:id"
-                element={<Home vibeDataFetch={vibeDataFetch} />}
+                element={<Home setId={setId} vibeDataFetch={vibeDataFetch} />}
               />
               <Route path="/discover" element={<Discover />} />
-              <Route path="/post" element={<PostUpload />} />
-              <Route path="/wallet" element={<Wallet />} />
+              <Route path="/post/:id" element={<PostUpload />} />
+              <Route path="/wallet/:id" element={<Wallet />} />
               <Route
-                path="/profile"
+                path="/profile/:id"
                 element={<Profile userDetails={userDetails} />}
               />
-              <Route path="/cart" element={<CartPage />} />
+              <Route path="/cart" element={<CartPage id={id} />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route
                 path="/"
@@ -57,14 +58,14 @@ export default function App() {
               <Route path="/signup" element={<SignupPage />} />
               {/* Poll routes */}
               <Route path="/poll" element={<PollPage />} /> {/* create poll */}
-              <Route path="/poll/:id" element={<PollVotePage />} />{" "}
+              <Route path="/poll/:id" element={<PollVotePage />} />
               {/* voting/result */}
             </Routes>
           </main>
           {!hideNav && (
             <div>
               <Chatbot />
-              <BottomNav />
+              <BottomNav id={id} />
             </div>
           )}
         </div>

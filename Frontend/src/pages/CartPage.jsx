@@ -4,11 +4,9 @@ import { usePoll } from "../context/PollContext";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-export default function CartPage() {
-  const{id}=useParams();
+export default function CartPage({ id }) {
   const { cartItems, removeFromCart } = useCart();
-  const {addToPoll}=usePoll(); //used addtoPoll
-
+  const { addToPoll } = usePoll(); //used addtoPoll
 
   // Calculate totals
   const subtotal = cartItems.reduce(
@@ -19,6 +17,11 @@ export default function CartPage() {
   const shipping = subtotal > 75 ? 0 : 5; // free shipping if > $75
   const total = subtotal - discount + shipping;
 
+  const handleOnAddProduct = (id) => {
+    const product = cartItems.find((p) => p._id === id);
+    addToPoll(product);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 p-6 flex flex-col">
       <h2 className="text-2xl font-bold mb-6">🛍️ Shopping Cart</h2>
@@ -27,7 +30,7 @@ export default function CartPage() {
         <div className="text-center text-gray-600">
           <p>Your cart is empty 🛒</p>
           <Link
-            to="/home/:id"
+            to={`/home/${id}`}
             className="mt-4 inline-block px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:opacity-90"
           >
             Continue Shopping
@@ -39,16 +42,15 @@ export default function CartPage() {
           <div className="md:col-span-2 space-y-6">
             {cartItems.map((item) => (
               <div
-                key={item.id}
+                key={item._id}
                 className="flex flex-col md:flex-row items-center bg-white shadow-md rounded-2xl p-4 border"
               >
                 {/* Product Image */}
                 <img
-                  src={item.image || "https://via.placeholder.com/150"}
+                  src={item.images[0] || "https://via.placeholder.com/150"}
                   alt={item.name}
                   className="w-32 h-32 object-cover rounded-lg"
                 />
-
                 {/* Product Info */}
                 <div className="flex-1 md:ml-6 mt-4 md:mt-0 text-center md:text-left">
                   <h3 className="text-lg font-semibold">{item.name}</h3>
@@ -76,9 +78,8 @@ export default function CartPage() {
                   >
                     Remove
                   </button>
-                  {/* ✅ New Button */}
                   <button
-                    onClick={() => addToPoll(item)}
+                    onClick={() => handleOnAddProduct(item._id)}
                     className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:opacity-90"
                   >
                     Add to Poll
@@ -120,15 +121,9 @@ export default function CartPage() {
             <button className="w-full mt-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-lg hover:opacity-90 transition">
               Proceed to Checkout
             </button>
-            <button className="w-full mt-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-lg hover:opacity-90 transition"> 
-
-            <Link
-              to={`/home/${id}`}
-              
-              >
-               Continue Shopping
-            </Link>
-              </button>
+            <button className="w-full mt-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-lg hover:opacity-90 transition">
+              <Link to={`/home/${id}`}>Continue Shopping</Link>
+            </button>
           </div>
         </div>
       )}
