@@ -12,6 +12,12 @@
 https://youtu.be/zXrMzAiIkQI?si=FGw7vJshXzFaMB2v
 
 
+### 👨‍💻 Role
+
+- fusionAman --> Frontend developer 
+- terror-akshat --> Backend developer
+---
+
 ## 🎯 Problem Statement
 
 Theme 2: The GenZ Way of Shopping  
