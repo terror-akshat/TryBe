@@ -12,10 +12,14 @@
 https://youtu.be/zXrMzAiIkQI?si=FGw7vJshXzFaMB2v
 
 
-### 👨‍💻 Role
+### 👨‍💻 Team Contributions
 
-- fusionAman --> Frontend developer 
-- terror-akshat --> Backend developer
+- **fusionAman** — Frontend Developer  
+  Focused on UI/UX, responsiveness, and performance.
+
+- **terror-akshat** — Backend Developer  
+  Responsible for APIs, database design, and system scalability.
+
 ---
 
 ## 🎯 Problem Statement
