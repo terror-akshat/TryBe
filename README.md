@@ -15,6 +15,7 @@ https://youtu.be/zXrMzAiIkQI?si=FGw7vJshXzFaMB2v
 ### 👨‍💻 Team Contributions
 
 - **fusionAman** — Frontend Developer  (https://github.com/fusionAman)
+
   Focused on UI/UX, responsiveness, and performance.
 
 - **terror-akshat** — Backend Developer  
